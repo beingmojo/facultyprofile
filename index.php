@@ -1,17 +1,17 @@
 <?php
-$_POST['page-title'] = "Home";  
+$_POST['page-title'] = "Home";
 $_POST['page-link1'] = "<link rel='stylesheet' type='text/css' href='styles/index.css' />";
 include_once 'includes/page-top.php';
 ?>
 <script type="text/javascript">
 
-function validate(){
-if( (document.getElementById('passwd').value)=="")
-  {
-  alert("Please enter valid id and password");
-return false;
-}
-}
+    function validate() {
+        if ((document.getElementById('passwd').value) == "")
+        {
+            alert("Please enter valid id and password");
+            return false;
+        }
+    }
 </script>
 
 <link href="video-js/video-js.css" rel="stylesheet" />
@@ -71,11 +71,11 @@ return false;
             <div><a href="browseprofiles.php?view=3">Technology Profiles</a></div>
             <!--//disabled facilities n labs// <div><a href="browseprofiles.php?view=4">Facility Profiles</a></div>-->
             <div><a href="browseprofiles.php?view=5">Equipment Profiles</a></div>
-<!--            <br /><h1>Search Options</h1><br />
-            <div ><a href="advsearch.php">Advanced Search</a></div>
-            <div><a href="clustersearch.php">Cluster Search <span class="style1">*</span></a></div>
-            <div><a href="graphnew.htm">Interactive Search <span class="style1">*</span></a></div>
-            <div>(<span class="style1">*</span> under construction)</div> -->
+            <!--            <br /><h1>Search Options</h1><br />
+                        <div ><a href="advsearch.php">Advanced Search</a></div>
+                        <div><a href="clustersearch.php">Cluster Search <span class="style1">*</span></a></div>
+                        <div><a href="graphnew.htm">Interactive Search <span class="style1">*</span></a></div>
+                        <div>(<span class="style1">*</span> under construction)</div> -->
             <br /><h1>Browse Options</h1><br />
             <div><a href="courses.php">Courses</a></div>
         </td>
@@ -88,7 +88,7 @@ return false;
                     <a href="browseprofiles.php?view=2"><img src="images/bullets/center.gif" alt="&gt;" width="12" height="12" border="0" /> Research Centers</a></label> <br />
                 <label for="technology"><input name="technology" class="more" id="technology" value="true" checked="checked" type="checkbox" />
                     <a href="browseprofiles.php?view=3"><img src="images/bullets/technology.gif" alt="&gt;" width="12" height="12" border="0" /> Technologies and Patents</a></label><br />
-                    <label for="equipment"><input name="equipment" class="more" id="equipment" value="true" checked="checked" type="checkbox"/>
+                <label for="equipment"><input name="equipment" class="more" id="equipment" value="true" checked="checked" type="checkbox"/>
                     <a href="browseprofiles.php?view=5"> <img src="images/bullets/equipment.gif" alt="&gt;" width="12" height="12" border="0" /> Equipment</a></label> <br />
 
                   <!--//disabled facilities n labs// <label for="facility"><input name="facility" class="more" id="facility" value="true" checked="checked" type="checkbox" />
@@ -97,18 +97,19 @@ return false;
                     <a href="browseprofiles.php?view=6"><img src="images/bullets/labgroup.gif" alt="&gt;" width="12" height="12" border="0" /> Laboratories and Research Groups</a></label> <br /> -->
                 <br /><div class="rsp" align="left" style="color:#580000">Enter Keyword</div><br />
                 <label for="search">
-               <input name="search" class="rsp" id="search" onfocus="if(this.value==' search...')
-                   this.value=''; " onblur="
-                   if(this.value=='') this.value=' search...';" value=" search..." size="20" type="text" /></label>
+                    <input name="search" class="rsp" id="search" onfocus="if (this.value == ' search...')
+            this.value = '';" onblur="
+        if (this.value == '')
+            this.value = ' search...';" value=" search..." size="20" type="text" /></label>
                 <input name="searchtype" value="basic" type="hidden" />
                 <input name="image2" type="image" src="images/arrow3.gif" alt="Search RPS..." align="bottom"/>
             </form>
-            
+
         </td>
         <td width="20%" align="left" valign="top">
             <br /><h1>Faculty & Staff Login</h1><br />
             <form action="f_login.php" method="post" enctype="application/x-www-form-urlencoded" name="login" id="login" onSubmit="return validate()">
-                 <!-- onSubmit="return validate()">-->
+                <!-- onSubmit="return validate()">-->
                 <table width="230" border="0" cellpadding="2" cellspacing="2">
                     <tr>
                         <td class="rsp"><div align="left">Texas State Net ID</div></td>
@@ -129,7 +130,7 @@ return false;
                     </tr>
                 </table>
                 <br />
-              
+
             </form>
         </td>
         <td width="20%"></td>

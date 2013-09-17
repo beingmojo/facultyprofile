@@ -3,12 +3,12 @@
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
         <title>Faculty Profile</title>
-        <link rel="stylesheet" type="text/css" href="/css/meta1.css" />
-        <link rel='stylesheet' type='text/css' href='/styles/index.css' />
-        <link href='/styles/style1.css' rel='stylesheet' type='text/css' />
-        <link href='/styles/list.css' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/meta1.css" />
+        <link rel='stylesheet' type='text/css' href='styles/index.css' />
+        <link href='styles/style1.css' rel='stylesheet' type='text/css' />
+        <link href='styles/list.css' rel='stylesheet' type='text/css' />
 
-        <script type='text/javascript' src='/scripts/bp_f.js'></script>
+        <script type='text/javascript' src='scripts/bp_f.js'></script>
         <script type='text/javascript'>
            
             function toggleWebtools()
@@ -80,7 +80,7 @@ pwd:profilesystempass
                 
         <div class="txst-mainsite-banner">
     <a href="http://www.txstate.edu/">
-        <img src="/uploads/mainsite-logo.png" alt="Texas State University Logo" class="txst-banner-homelink"/>
+        <img src="uploads/mainsite-logo.png" alt="Texas State University Logo" class="txst-banner-homelink"/>
     </a>
     <div class="txst-banner-toolsandsearch">
         <div class="txst-banner-webtools-menuheader">
@@ -100,7 +100,7 @@ pwd:profilesystempass
                
             </div>
             <div class="txst-banner-webtools-searchbg">
-                <input type="image" src="/uploads/x.gif"
+                <input type="image" src="uploads/x.gif"
                        class="txst-banner-toolssearchbutton" alt="Start Search"/>
             </div>
         </form>
@@ -147,7 +147,7 @@ pwd:profilesystempass
         <a href="http://www.txstate.edu/round-rock.html" class="txst-mainsite-banner-link-right">Round Rock</a>
     </div>
     <div class="txst-mainsite-systemstatement">
-        <img src="/uploads/systemstatement.gif"
+        <img src="uploads/systemstatement.gif"
              alt="A member of the Texas State University System" />
     </div>
 </div>
