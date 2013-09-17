@@ -1,0 +1,18 @@
+Rio Grande Basin Digital Watershed Mapping and Watershed Management Spatial Decision Support System Initiative 4.5M
+
+While integrated watershed management for the Rio Grande Basin is widely supported, the spatial information on socioeconomic and geophysical processes needed for comprehensive evaluation of integrated economic growth and resource management plans is not readily accessible to decision makers.  The objective of the Rio Grande Basin Digital Watershed Mapping and Intergrated Watershed Management Decision Support System initiative is to develop, promote, and disseminate GIS based decision support to help manage watersheds in the Rio Grande River Basin. With the Web based GIS mapping of watershed management data and various modeling tools, this initiative will provide scientifically based information that will help policy makers in understanding and evaluating alternative economic development senarios and management approaches. Our aim is to make these information and decision support tools available to state and local authorities, natural resource managers, and the general public. 
+
+Support of this intiative will produce: 
+
+1. Web based digital watershed mapping that will provide centralized geospatial information repository of social economic, natural resource, and environmental data. 
+2. An intergrted decision support system that will provide decision makers with knowledge of the spatial and temporal interactions between economic amd environmental processes. 
+The decision support system will incorportes follwoing key watershed management components: 
+1) Regional economic growth modeling
+2) Regional population growth projection modeling
+3) Land use and land cover change as a result of economic and population expansion in the region modeling
+4) Regional climate change modeling
+5) Interactive simulation model of the impact of climate change and differenteconomic growth senarios on 
+a) stream flow and nonpoint source pollution
+b) water demand in the region, such as municipal, industrial, irrigation, and livestock water demand 
+	
+

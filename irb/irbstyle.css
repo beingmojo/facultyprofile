@@ -1,0 +1,103 @@
+
+  <style type="text/css">
+
+.style6 {
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #333399;
+	font-weight: bold;
+}
+a.navbar:link {
+	color: #4d3319;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+}
+a.navbar:visited {
+	color: #4d3319;
+	text-decoration: none;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+}
+a.navbar:hover {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: underline;
+}
+a.body:link {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #336699;
+	text-decoration: underline;
+}
+a.body:visited {
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #4D3319;
+	text-decoration: underline;
+}
+
+a.irb:link{
+color: #FFFFFF;
+font-family: Verdana, Arial, Helvetica, sans-serif;font-size: small;
+	
+	text-decoration: none;
+
+}
+a.irb:visited {
+color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;font-size: small;
+	
+	text-decoration: none;
+}
+
+body {
+	background-image: url(bg2.jpg);
+	font-family: Verdana, Helvetica, sans-serif;font-size: small;
+}
+.style1 {
+	color: #000066;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: small; }
+
+.style3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: small;
+}
+.style39 {
+	color: #FFFFFF;
+	font-size: medium;
+}
+a.irbhome:link {font-family: Verdana, Arial, Helvetica, sans-serif; color: #ffffff; font-size: medium; 
+text-decoration: none;
+}
+a.irbhome:visited {font-family: Verdana, Arial, Helvetica, sans-serif; color: #ffffff; font-size: medium;text-decoration: none;
+}
+.tsu {font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #996600; font-size: large; 
+}
+a.tsu:link {font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #996600; font-size: large; text-decoration: none;
+}
+a.tsu:visited {font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #996600; font-size: large; text-decoration: none;
+}
+a.homemenu:link{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+a.homemenu:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+}
+-->
+
+
+td {
+	font-family: Verdana, Helvetica, sans-serif;font-size: small;
+}
+
+th {
+	font-family: Verdana, Helvetica, sans-serif;
+}  </style>

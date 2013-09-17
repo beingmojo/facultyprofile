@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+        <title>Research Profile System - Texas State University-San Marcos</title>
+        <!--link href="css/profile.css" rel="stylesheet" type="text/css" /-->
+        <script>
+            var timeOutId = 0;
+            var xmlhttp = null;
+            var params = "mini-profile.php";
+            
+            function getHTTPObject() {
+                var xmlhttp = false;
+                var ie5 = document.all && document.getElementById;
+                var ns6 = document.getElementById && !document.all;
+                if (ns6) {
+                try {
+                        xmlhttp = new XMLHttpRequest();
+                    }catch(e) {}
+                }else {
+                    try {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }catch(E) {}
+                }
+                return xmlhttp;
+            }
+            function getContent(qs) {
+//                alert('request: ' + qs);
+                clearTimeout(timeOutId);
+                if (xmlhttp == null) {
+                    xmlhttp = getHTTPObject();
+                }
+                xmlhttp.open("GET", qs, true);
+                xmlhttp.onreadystatechange = dataReady;
+                xmlhttp.send(null)
+            }
+            function dataReady() {
+                if (xmlhttp.readyState==4) {
+                    var response = xmlhttp.responseText;
+                    var i = response.indexOf("\n");
+                    var uri = response.substring(0, i);
+                    var content = response.substring(i+1, response.length);
+                    document.getElementById("content").innerHTML = content;
+                    string = "getContent('" + params + uri +"');";
+                    timeOutId = setTimeout(string, 3000);
+                }
+            }
+            function start() {
+                getContent(params);
+            }
+        </script>
+    </head>
+    <body onload="javascript:start()">
+        <center><div id="content"></div></center>
+    </body>
+</html>

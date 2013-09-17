@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <title>Research Profile System - Texas State University-San Marcos</title>
+        <script src="getimages.php"></script>
+        <script type="text/javascript">
+            var curimg=0
+            function rotateimages(){
+                document.getElementById("slideshow").setAttribute("src", ""+galleryarray[curimg])
+                curimg=(curimg<galleryarray.length-1)? curimg+1 : 0
+            }
+            window.onload=function(){
+                setInterval("rotateimages()", 5000)
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width: 170px; height: 160px">
+            <img id="slideshow" src="" />
+        </div>
+    </body>
+</html>

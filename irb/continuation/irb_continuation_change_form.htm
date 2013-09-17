@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>irb_continuation_change_form</title>
+
+<script type="text/JavaScript">
+<!--
+function FDK_StripChars(theFilter,theString)
+{
+	var strOut,i,curChar
+
+	strOut = ""
+	for (i=0;i < theString.length; i++)
+	{		
+		curChar = theString.charAt(i)
+		if (theFilter.indexOf(curChar) < 0)	// if it's not in the filter, send it thru
+			strOut += curChar		
+	}	
+	return strOut
+}
+
+function FDK_AllInRange(x,y,theString)
+{
+	var i, curChar
+	
+	for (i=0; i < theString.length; i++)
+	{
+		curChar = theString.charAt(i)
+		if (curChar < x || curChar > y) //the char is not in range
+			return false
+	}
+	return true
+}
+
+function FDK_reformat(s)
+{
+    var arg;
+    var sPos = 0;
+    var resultString = "";
+
+    for (var i = 1; i < FDK_reformat.arguments.length; i++) {
+       arg = FDK_reformat.arguments[i];
+       if (i % 2 == 1) 
+           resultString += arg;
+       else 
+       {
+           resultString += s.substring(sPos, sPos + arg);
+           sPos += arg;
+       }
+    }
+    return resultString;
+}
+
+function FDK_AddToValidateArray(FormName,FormElement,Validation,SetFocus)
+{
+    var TheRoot=eval("document."+FormName);
+ 
+    if (!TheRoot.ValidateForm) 
+    {
+        TheRoot.ValidateForm = true;
+        eval(FormName+"NameArray = new Array()")
+        eval(FormName+"ValidationArray = new Array()")
+        eval(FormName+"FocusArray = new Array()")
+    }
+    var ArrayIndex = eval(FormName+"NameArray.length");
+    eval(FormName+"NameArray[ArrayIndex] = FormElement");
+    eval(FormName+"ValidationArray[ArrayIndex] = Validation");
+    eval(FormName+"FocusArray[ArrayIndex] = SetFocus");
+ 
+}
+
+function FDK_ValidateEmail(FormElement,Required,ErrorMsg)
+{
+   var msg = "";
+   var val = FormElement.value;
+   var msgInvalid = ErrorMsg;
+
+   var theLen = FDK_StripChars(" ",val).length
+   if (theLen == 0)	     {
+     if (!Required) return "";
+     else return msgInvalid;
+   }
+
+   if (val.indexOf("@",0) < 0 || val.indexOf(".")<0) 
+   {
+      msg = msgInvalid;
+   }
+   return msg;
+}
+
+function FDK_AddEmailValidation(FormName,FormElementName,Required,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateEmail("+FormElementName+","+Required+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)
+}
+
+function FDK_ValidateNonBlank(FormElement,ErrorMsg)
+{
+  var msg = ErrorMsg;
+  var val = FormElement.value;  
+
+  if (!(FDK_StripChars(" \n\t\r",val).length == 0))
+  {
+     msg="";
+  }
+
+  return msg;
+}
+
+function FDK_AddNonBlankValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateNonBlank("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)
+}
+
+function FDK_ValidateRadio(RadioGroup,ErrorMsg)
+{
+	var msg = ErrorMsg;
+
+    for (x=0;x<RadioGroup.length;x++)  {
+		if (RadioGroup[x].checked)  {
+			msg=""
+		} 
+	}
+	return msg;
+}
+
+function FDK_AddRadioValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateRadio("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName + '[0]'),ValString,SetFocus)
+}
+
+function FDK_Validate(FormName, stopOnFailure, AutoSubmit, ErrorHeader)
+{
+ var theFormName = FormName;
+ var theElementName = "";
+ if (theFormName.indexOf(".")>=0)  
+ {
+   theElementName = theFormName.substring(theFormName.indexOf(".")+1)
+   theFormName = theFormName.substring(0,theFormName.indexOf("."))
+ }
+ var ValidationCheck = eval("document."+theFormName+".ValidateForm")
+ if (ValidationCheck)  
+ {
+  var theNameArray = eval(theFormName+"NameArray")
+  var theValidationArray = eval(theFormName+"ValidationArray")
+  var theFocusArray = eval(theFormName+"FocusArray")
+  var ErrorMsg = "";
+  var FocusSet = false;
+  var i
+  var msg
+    
+ 
+        // Go through the Validate Array that may or may not exist
+        // and call the Validate function for all elements that have one.
+  if (String(theNameArray)!="undefined")
+  {
+   for (i = 0; i < theNameArray.length; i ++)
+   {
+    msg="";
+    if (theNameArray[i].name == theElementName || theElementName == "")
+    {
+      msg = eval(theValidationArray[i]);
+    }
+    if (msg != "")
+    {
+     ErrorMsg += "\n"+msg;                   
+     if (stopOnFailure == "1") 
+     {
+       if (theFocusArray[i] && !FocusSet)  
+      {
+       FocusSet=true;
+       theNameArray[i].focus();
+      }
+      alert(ErrorHeader+ErrorMsg);
+      document.MM_returnValue = false; 
+      break;
+     }
+     else  
+     {
+      if (theFocusArray[i] && !FocusSet)  
+      {
+       FocusSet=true;
+       theNameArray[i].focus();
+      }
+     }
+    }
+   }
+  }
+  if (ErrorMsg!="" && stopOnFailure != "1") 
+  {
+   alert(ErrorHeader+ErrorMsg);
+  }
+  document.MM_returnValue = (ErrorMsg==""); 
+  if (document.MM_returnValue && AutoSubmit)  
+  {
+   eval("document."+FormName+".submit()")
+  }
+ }
+}
+//-->
+</script>
+<link href="../css/forms.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2><form>
+    <input type="hidden" name="DestinationEmail" value="ys11@txstate.edu">
+    <input type="hidden" name="thankyoupage"  value= />
+    <input name="messagesubject" type="hidden" id="messagesubject" value="Confirmation-IRB Continuation/Change" />
+    <input type="hidden" name="options" value="send-to-sender" />
+    Section 1   </h2>
+  <p>&nbsp;</p>
+  <p>&nbsp;1. Please provide</p>
+  <p>&nbsp;</p>
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;	First Name
+    <input name="SenderFirstName" type="text" id="SenderFirstName" value="" size="20" />
+    &nbsp; Last Name
+    <input name="SenderName" type="text" id="SenderName" value="" size="20" />
+  </p>
+  <p>&nbsp;</p>
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;	Phone Number
+    <input name="SenderPhone" type="text" id="SenderPhone" value="" size="12" />
+    &nbsp; Extension
+    <input name="SenderPhoneExt" type="text" id="SenderPhoneExt" value="-N/A if no ext.-" size="15" />
+    &nbsp;&nbsp;Email
+    <input name="SenderEmail" type="text" id="SenderEmail" value="" size="35" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp; **Please check to be sure your phone number and email address are correct. </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;2.&nbsp; Are you a</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="userStatus" type="radio" value="Faculty Member" />
+    Faculty Member </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="userStatus" type="radio" value="Staff Member" />
+    Staff Member</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="userStatus" type="radio" value="Student" />
+    Student</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="userStatus" type="radio" value="Other" />
+    Other</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;3.&nbsp;	If you are a student, please supply the contact information for your supervising faculty member:&nbsp;(leave N/A in all fields if you are not a student.) </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First Name
+    <input name="SupervisorFirstName" type="text" id="SupervisorFirstName" value="N/A if NOT a student" size="20" />
+    &nbsp; Last Name
+    <input name="SupervisorLastName" type="text" id="SupervisorLastName" value="N/A if NOT a student" size="20" />
+  </p>
+  <p>&nbsp;</p>
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Phone Number
+    <input name="SupervisorPhoneNumber" type="text" id="SupervisorPhoneNumber" value="N/A if Not a student" size="20" />
+    &nbsp; Extension
+    <input name="SupervisorPhoneExtension" type="text" id="SupervisorPhoneExtension" value="-N/A if no ext.-" size="15" />
+    &nbsp;&nbsp;Email
+    <input name="SupervisorEmail" type="text" id="SupervisorEmail" value="N/A if NOT a student" size="35" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;4.&nbsp;	Original IRB Reference Number&nbsp;&nbsp;&nbsp;
+      <input name="IRBReferenceNumber" type="text" id="IRBReferenceNumber" value="" size="35" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;5.&nbsp;&nbsp;Project Title&nbsp;
+      <input name="ProjectTitle" type="text" id="ProjectTitle" value="" size="35" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;6.&nbsp; Project Type&nbsp;&nbsp;&nbsp;
+      <select name="ProjectType" id="ProjectType">
+        <option value="Choose One" selected="selected">Choose One</option>
+        <option value="Academic/Class">Academic/Class</option>
+        <option value="Funded Research">Funded Research</option>
+        <option value="Non-funded Research">Non-funded Research</option>
+        <option value="Institutional/Admin">Institutional/Admin.</option>
+      </select>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;7.&nbsp; If your project is funded:</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	State the name of the funder:
+    <input name="FunderName" type="text" id="FunderName" value="N/A if not funded" size="55" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	State the grant ID number:&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="GrantIDNumber" type="text" id="GrantIDNumber" value="N/A if not funded" size="30" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State the length of project period:&nbsp;
+      <input name="LengthOfProject" type="text" id="LengthOfProject" value="N/A if not funded" size="30" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;8.&nbsp; You will be informed of the IRB's decision via email</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you require a signed hard copy of the IRB's decision for your records?&nbsp;&nbsp;&nbsp;
+      <input name="IRBDecisionHardCopy" type="radio" value="Yes" />
+    Yes&nbsp;&nbsp;&nbsp;&nbsp;
+    <input name="IRBDecisionHardCopy" type="radio" value="No" />
+    No</p>
+  <p>&nbsp;</p>
+  <p></p>
+  <h2><span class="questionsection">Section 2 </span></h2>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <p>&nbsp;1.&nbsp; What is the status of your study?</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="StudyStatus" id="StudyStatus">
+        <option selected="selected">Choose One</option>
+        <option value="Data Analysis Only">Data Analysis Only</option>
+        <option value="Study on Hold">Study on Hold</option>
+        <option value="Study Not Begun">Study Not Begun</option>
+        <option value="Following Subjects">Following Subjects</option>
+        <option value="Recruiting Subjects">Recruiting Subjects</option>
+        <option value="Other - Explain in Next Box">Other - Explain in Next Box</option>
+      </select>
+    &nbsp;&nbsp;&nbsp; </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you chose &quot;Other&quot;, please provide an explanation: </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea name="StudyStatusExplanation" cols="55" id="StudyStatusExplanation">N/A if &quot;Other&quot; is not chosen as the status of the study.</textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;2. Total number of participants <em><strong>approved</strong></em> for the study:
+    <input name="NumberOfParticipantsApproved" type="text" id="NumberOfParticipantsApproved" value="" size="15" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;3. Number of participants <em><strong>enrolled since last IRB review (continuing or initial)</strong></em>:&nbsp;
+      <input name="ParticipantsEnrolledSinceLastReview" type="text" id="ParticipantsEnrolledSinceLastReview" value="" size="15" />
+  </p>
+  <p>&nbsp; </p>
+  <p>&nbsp;4. Number of participants <em><strong>enrolled in the study to date </strong></em>:&nbsp;
+      <input name="ParticipantsEnrolledToDate" type="text" id="ParticipantsEnrolledToDate" value="" size="15" />
+  <span class="repmenu"><strong></strong></span></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;5. If actual total enrollment is different from the original project enrollment, provide an explanation:</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;
+      <textarea name="DifferentEnrollmentExplanation" cols="65" id="DifferentEnrollmentExplanation">N/A if there is no difference in total enrollment</textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;6.&nbsp; Has your relationship with the study sponsor changed since the IRB review in any way which might require conflict of interest disclosure (e.g. stock purchases, royalty payments, patents, Board position, etc.)??</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="RelationshipChange" type="radio" value="Yes" />
+    Yes</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="RelationshipChange" type="radio" value="No" />
+    No</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;7.&nbsp; Have there been any changes in Principal Investigator, Co-Investigators or staff?</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="PIChange" type="radio" value="Yes" />
+    Yes</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;
+    &nbsp;
+         <input name="PIChange" type="radio" value="No" />
+    No</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> If yes,</strong> please explain:</p>
+  <p>&nbsp;&nbsp;&nbsp; &nbsp;
+      <textarea name="PIChangeExplanation" cols="65" id="PIChangeExplanation">N/A if answer above is &quot;No&quot;</textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;8.&nbsp; Summarize preliminary information about any results and/or trends (DO NOT LEAVE BLANK):</p>
+  <p>&nbsp;</p>
+  <p></p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea name="ResultsSummary" cols="65" rows="6" id="ResultsSummary"></textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p></p>
+  <p>&nbsp;9.&nbsp; Describe any unanticipated problems in the conduct of the study (if none, state &quot;none&quot;):</p>
+  <p>&nbsp;</p>
+  <p></p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea name="UnanticpatedProblems" cols="65" rows="6" id="UnanticpatedProblems">State &quot;None&quot;  if no unanticipated problems have occurred</textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>10.&nbsp; Has the risk/benefit relationship for subjects changed from the initial expectation?</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="RiskBenefitChange" type="radio" value="Yes" />
+    Yes</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;
+    &nbsp;
+        <input name="RiskBenefitChange" type="radio" value="No" />
+    No</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> If yes,</strong> describe what has changed from the initial expectations:</p>
+  <p>&nbsp;&nbsp;&nbsp; &nbsp;
+      <textarea name="RiskBenefitChangedExplanation" cols="65" rows="6" id="RiskBenefitChangedExplanation">N/A if &quot;No&quot; is chosen above</textarea>
+  </p>
+  <p>&nbsp;</p>
+  <p>11.&nbsp; List and Explain any other changes in the study or study period originally approved by the IRB (if none, state &quot;none&quot;):</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea name="ChangesInStudySinceApproval" cols="65" rows="6" id="ChangesInStudySinceApproval"></textarea>
+  </p>
+  &nbsp;&nbsp;&nbsp;**Please note:  All current consent/assent forms, even if unchanged from original submission, should be submitted directly to the OSP IRB administrator, via email or hard copy. Please include your name and IRB reference number on all documents. <br />
+  <br />
+  Please check your answers carefully before submitting.Completed submissions will result in a confirmation email which will contain your data as submitted to the email address you provided.. If you do not receive a confirmation, please contact OSP at 245-2102. &nbsp;Wait until the server acknowledges processing your form           before leaving this page. Thank you for your cooperation. 
+  <p>&nbsp;</p>
+  <p align="center">
+    <input type="submit" name="Submit" value="Submit Form" /></p></form>
+    &nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

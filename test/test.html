@@ -1,0 +1,22 @@
+<!--TUTORIAL LINK:
+    http://www.javascriptkit.com/javatutors/externalphp2.shtml
+    http://www.javascriptkit.com/javatutors/externalphp.shtml
+-->
+<script src="pics/getimages.php"></script>
+
+<script type="text/javascript">
+
+var curimg=0
+function rotateimages(){
+document.getElementById("slideshow").setAttribute("src", "pics/"+galleryarray[curimg])
+curimg=(curimg<galleryarray.length-1)? curimg+1 : 0
+}
+
+window.onload=function(){
+setInterval("rotateimages()", 2000)
+}
+</script>
+
+<div style="width: 170px; height: 160px">
+<img id="slideshow" src="" />
+</div>

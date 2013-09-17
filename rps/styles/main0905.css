@@ -1,0 +1,160 @@
+		body {
+		text-align:center;
+		background:#093576;
+		background-color: #F7F6F6;
+		background-repeat: repeat-x;
+		margin:0;
+		
+	/*DOES NOT VALIDATE behavior: url(htcmime.php?file=csshover.htc) */
+		}
+
+/* container for the entire page */	
+	#frame {
+		width:760px;
+		height: 100%;
+		margin-right:auto;
+		margin-left:auto;
+		padding:0px;
+		text-align:left;
+		}
+	
+	#arch {
+		padding: 0px;
+		margin-top:5px;
+		margin-bottom: -5px;
+		background-image: url("../images/real/dome1.png");
+		background-repeat: no-repeat;
+		background-position: top center;
+		}
+
+	#topbanner {
+		padding: 0px;
+		width:100%;
+		height: 50px;
+		background: #093576;
+		background-image: url("../images/real/wordmark.gif");
+		background-repeat: no-repeat;
+		background-position: 80px 10px;
+
+		}
+
+/* this hides the main heading so it shows only if no CSS */		
+#topbanner h1 {
+    display: none;
+}    
+
+/* search box */
+	#topbanner input.searchbox
+	 {
+        color: #000000;
+        font-size: 10px;
+        background-color: #C2D1E6;
+        border: 0;
+		height: 15px;
+		position: relative;
+		top: 13px;
+		left: 570px;
+		}
+
+	#topbanner input.searchimage
+	 {
+        position: relative;
+		top: 19px;
+		left: 568px;
+		}
+		
+	#topnav {
+		width:100%;
+		background-color: #0C479D;
+		font-family: Verdana, sans-serif;
+		font-weight: bold;
+		font-size: 11px;
+		padding: 3px 0px 3px 0px;
+		margin: 0px;
+		position: relative;
+		float: left;
+	}			
+
+	#topnav span {
+		margin: 0px 12px;
+		}
+		
+	#topnav span.spacer {
+		margin: 0px 2px;
+		color: #0C479D;	
+		}
+#topnav a:link, #topnav a:visited
+{
+color: #fff;
+background-color: #0C479D;
+text-decoration: none;
+}
+
+#topnav a:hover
+{
+color: #DA8101;
+background-color: #0C479D;
+text-decoration: none;
+
+}
+	#maincontent {
+		width: 100%;
+		float: left;
+		margin-top: 10px;
+		border: 1px solid #BFD1ED;
+		background: #093576;
+		}
+			
+	div#flash-slideshow {
+	position: absolute;
+	top: 120px;
+	left: 150px;
+	}
+	
+#footer {
+width: 760px;
+float: left;
+margin: 10px;
+text-align: center;
+font-family: Verdana, sans-serif;
+font-size: 10px;
+}
+#footer a:link, #footer a:visited {color: #000; background-color: transparent; text-decoration: underline; }.subtitle {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #0C479D;
+}
+.subsubtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #CCCC66;
+	background-color: #093576;
+}
+.more2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	background-color: #C2D1E6;
+}
+.searchbox2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #C2D1E6;
+}
+.searchrsp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}

@@ -1,0 +1,42 @@
+2009/02/23 14:04:58  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\acc.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:58  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:58  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:58  ShapeProject Converting 3 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\acc.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\acc.shp
+2009/02/23 14:04:59  Elapsed time: .031 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\bac_stat.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 41 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\bac_stat.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\bac_stat.shp
+2009/02/23 14:04:59  Elapsed time: .016 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cat.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 1 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cat.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cat.shp
+2009/02/23 14:04:59  Elapsed time: .016 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\catpt.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 1 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\catpt.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\catpt.shp
+2009/02/23 14:04:59  Elapsed time: .016 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cnty.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 9 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cnty.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cnty.shp
+2009/02/23 14:04:59  Elapsed time: .016 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cntypt.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 9 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cntypt.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\cntypt.shp
+2009/02/23 14:04:59  Elapsed time: .031 sec
+2009/02/23 14:04:59  ShapeUtil CommandLine '"c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\ecoreg.shp" "+proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m"'
+2009/02/23 14:04:59  projectionDest = +proj=utm +zone=14 +ellps=GRS80 +lon_0=-99 +lat_0=0 +k=0.9996 +x_0=500000.0 +y_0=0 +datum=NAD83 +units=m
+2009/02/23 14:04:59  projectionSource = +proj=latlong +ellps=clrk66
+2009/02/23 14:04:59  ShapeProject Converting 4 shapes in c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\ecoreg.shp
+2009/02/23 14:04:59  ShapeProject Finished with c:\documents and settings\ys11\local settings\temp\d4em_unpack_core31\12100203\ecoreg.shp
+2009/02/23 14:04:59  Elapsed time: .031 sec

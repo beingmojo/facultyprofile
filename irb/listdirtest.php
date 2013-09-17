@@ -1,0 +1,13 @@
+<?php
+
+$path = "appdoc";
+$dh = opendir($path);
+$i=1;
+while (($file = readdir($dh)) !== false) {
+    if($file != "." && $file != "..") {
+        echo "$i. <a href='$path/$file'>$file</a><br />";
+        $i++;
+    }
+}
+closedir($dh);
+?> 

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset2" value="name:Email;datatype:string,name:username;datatype:string" />
+	<infoitem key="UD_Recordset1" value="name:rev1Comments;datatype:blob,name:rev2Comments;datatype:blob,name:rev1Approved;datatype:string,name:rev2Approved;datatype:string,name:rev1ApprovedDate;datatype:string,name:rev2ApprovedDate;datatype:string,name:rev1ID;datatype:string,name:rev2ID;datatype:string,name:irbEmails;datatype:blob,name:rev3ID;datatype:string,name:rev3Approved;datatype:string,name:rev3ApprovedDate;datatype:string,name:rev3Comments;datatype:blob,name:App_Number;datatype:string,name:username;datatype:string" />
+</info>

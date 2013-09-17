@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--TUTORIAL LINK:
+    http://www.tizag.com/phpT/fileupload.php
+-->
+<html>
+    <head>
+        <title>rps.test: File Upload</title>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" action="file_upload.php" method="POST">
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000" /> <!--100KB-->
+            aChoose a file to upload: <input name="uploadedfile" type="file" /><br />
+            <input type="submit" value="Upload File" />
+        </form>
+        <!--
+            Here is a brief description of the important parts of the above html code:
+            * enctype="multipart/form-data" - Necessary for our to-be-created PHP file to function properly.
+            * action="uploader.php" - The name of our PHP page that will be created, shortly.
+            * method="POST" - Informs the browser that we want to send information to the server using POST.
+            * input type="hidden" name="MA... - Sets the maximum allowable file size, in bytes, that can be
+              uploaded. This safety mechanism is easily bypassed and we will show a solid backup solution in PHP.
+              We have set the max file size to 100KB in this example.
+            * input name="uploadedfile" - uploadedfile is how we will access the file in our PHP script.
+
+            Typically, the PHP file should make a key decision with all uploads: keep the file or throw it away.
+            A file might be thrown away for many reasons, including:
+            * The file is too large and you do not want to have it on your server.
+            * You wanted the person to upload a picture and they uploaded something else, like an executable file (.exe).
+            * There were problems uploading the file and so you can't keep it.
+            This example is very simple and omits the code that would add such functionality.
+
+            When the php file is executed, the uploaded file exists in a temporary storage area on the server.
+            If the file is not moved to a different location it will be destroyed! To save our precious file
+            we are going to need to make use of the $_FILES associative array.
+            The $_FILES array is where PHP stores all the information about files.
+            There are two elements of this array that we will need to understand for this example.
+            * uploadedfile - uploadedfile is the reference we assigned in our HTML form.
+              We will need this to tell the $_FILES array which file we want to play around with.
+            * $_FILES['uploadedfile']['name'] - name contains the original path of the user uploaded file.
+            * $_FILES['uploadedfile']['tmp_name'] - tmp_name contains the path to the temporary file that
+              resides on the server. The file should exist on the server in a temporary directory with a
+              temporary name.
+            Now we can finally start to write a basic PHP upload manager script! Here is how we would get
+            the temporary file name, choose a permanent name, and choose a place to store the file.
+        -->
+    </body>
+</html>

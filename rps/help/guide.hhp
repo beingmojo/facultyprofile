@@ -1,0 +1,64 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=guide.chm
+Contents file=Table of Contents.hhc
+Default topic=createnew.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+createnew.htm
+equip_contact.htm
+equip_desc&details.htm
+equipment1.htm
+equipment.htm
+facil_about.htm
+facil_contactinfo.htm
+facil_equipment.htm
+facil_participatingfaculty.htm
+facil_research&service.htm
+facil_researchcenters.htm
+facility.htm
+facul_a&h.htm
+facul_addinfo.htm
+facul_aff.htm
+facul_app.htm
+facul_contactinfo.htm
+facul_n&a.htm
+facul_p&p.htm
+facul_pp.htm
+facul_pub.htm
+facul_r&e.htm
+facul_sa.htm
+facul_support.htm
+faculty.htm
+firstlogin.htm
+intro.htm
+layout.htm
+login.htm
+myprofiles.htm
+recen_about.htm
+recen_accomplishments.htm
+recen_contactinfo.htm
+recen_equipment.htm
+recen_facilities.htm
+recen_members.htm
+recen_publications.htm
+recen_re&services.htm
+recen_technologies.htm
+researchcenter.htm
+techn_abstract.htm
+techn_benefits.htm
+techn_features.htm
+techn_generalinfo.htm
+techn_ipstatus.htm
+techn_marketpotential.htm
+techn_problem.htm
+techn_researchers.html
+techn_solution.htm
+technology.htm
+
+[INFOTYPES]
+

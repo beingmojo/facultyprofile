@@ -1,0 +1,56 @@
+<?php
+require_once('dbc.php'); ?>
+
+<?php
+
+
+//if the login form is submitted
+if (isset($_POST['submit'])) { // if form has been submitted
+
+//This makes sure they did not leave any fields blank
+if (!$_POST['SecurityCode'] | !$_POST['SecurityCode'] | !$_POST['SecurityCodeNew'] ) {
+die('You did not complete all of the required fields');
+}
+
+$sql="select security where ID = '".$_POST[SecurityID]."' AND SecurityCode = '".$_POST[SecurityCode]."'";
+
+$check = mysql_query($sql,$con))
+  
+$check2 = mysql_num_rows($check);
+if ($check2 != 0)
+{
+mysql_query("UPDATE security SET SecurityCode = '".$POST[SecurityCodeNew]"."'";
+WHERE ID = '" . $POST[SecurityID]. "'"); 
+
+echo "Security Code changed";
+}
+else
+{
+echo "You are not authorized to change the security code."
+}
+
+else //form not submitted
+?>
+
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post"> 
+<table border="0"> 
+<tr><td colspan=2><h1>Set Security Code for IRB Staff Login </h1></td></tr> 
+<tr><td>Security ID:</td><td> 
+<input type="text" name="SecurityID" maxlength="40"> 
+</td></tr> 
+<tr><td>Old Security Code:</td><td> 
+<input type="text" name="SecurityCode" maxlength="50"> 
+</td></tr> 
+<tr><td>New Security Code:</td><td> 
+<input type="text" name="SecurityCodeNew" maxlength="50"> 
+</td></tr>
+<tr><td colspan="2" align="right"> 
+<input type="submit" name="submit" value="submit"> 
+</td></tr> 
+</table> 
+</form> 
+<?php 
+ 
+
+mysql_close($con);
+?>

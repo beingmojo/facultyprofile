@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/help_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>rSp Help Guide - Introduction</title>
+<!-- InstanceEndEditable -->
+<link href="../styles/style1.css" rel="stylesheet" type="text/css" />
+<link href="../styles/list.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="form_elements_row_action" id="basic_layout">
+ <tr>
+    <td height="3" class="table_background">
+      <table width="100%"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><div align="left"><img src="../images/rspbanner.jpg" alt="Research Profile" width="751" height="95" align="left" /></div>          </td>
+          <td>
+	      	<form action="../searchresults.php" method="get" enctype="application/x-www-form-urlencoded">
+			    <input name="search" type="text" class="form_elements" id="search" size="15" />		  
+			    <input name="Submit" type="submit" class="form_elements_row_action" value="Quick Search" />
+			  </form>		  </td>
+        </tr>
+      </table>    </td>
+  </tr>
+  <tr>
+    <td align="left" class="table_background_other"><!-- InstanceBeginEditable name="pagename" -->
+      <div align="left" class="page_heading">Help Guide - Introduction</div>
+	      <!-- InstanceEndEditable -->	</td>	  
+
+    <td valign="top" class="table_background_other" align='right'>
+		<div id="menu">
+			<ul id="nav">
+			  <li>
+			  <?php
+			  print( "<a href='{$_home}/index.php'>Home</a>" );
+			  if( $_SESSION["UID"] != "" )
+			  	{print( "<ul><li><a href='researchspace.php'>Research Space</a></li>");
+			  	 print( "<li><a href='logoff.php'>Logoff</a></li></ul>" );
+				}
+			  ?>
+			  </li>
+			  <li><a href="../browseprofiles.php?view=1">Browse </a>
+				<ul>
+				  <li><a href="../browseprofiles.php?view=1">Faculty</a></li>
+				  <li><a href="../browseprofiles.php?view=2">Center</a></li>
+				  <li><a href="../browseprofiles.php?view=3">Technology</a></li>
+				  <li><a href="../browseprofiles.php?view=4">Facility</a></li>
+				  <li><a href="../browseprofiles.php?view=5">Equipment</a></li>
+				  <li><a href="../browseprofiles.php?view=6">Labs & Groups</a></li>
+			  	  <li><a href="../courses.php">Courses</a></li>
+				</ul>
+			  </li> 
+			  <li><a href="../newsearch.php">Search </a>
+				<ul>
+				  <li><a href="../newsearch.php">Basic</a></li>
+				  <li><a href="../clustersearch.php">Cluster</a></li>
+				  <li><a href="../advsearch.php">Advanced</a></li>
+				</ul>
+			  </li>
+			  <li><a href="../aboutrsp.php">Support</a>
+				<ul>
+				  <li><a href="../aboutrsp.php">About rSp</a></li>
+				  <li><a href="index.php">Help and FAQ's</a></li>
+				  <li><a href="../feedback.php">Contact Us</a></li>
+				</ul>
+			  </li>
+
+			</ul>
+      </div>
+
+	</td>
+      
+  </tr>
+  <!-- content goes here -->
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+	<!-- InstanceBeginEditable name="content" -->
+	<p align="left"><a name="intro" id="intro" class="font_topic">Introduction</a></p>
+	<p class="font_orange"><strong>The ReSearch Profile (RSP) system provides: </strong></p>
+	  <ul style="list-style:none; list-style-image:url(../images/bullets/green.png);" class="list_others">
+		  <li>Individuals and Organizations easy access to innovation, knowledge, technologies and know-how.</li>
+       	  <li>Industry access to ideas, talent, and geographic proximity to skilled labor pools and R&amp;D facilities.</li>
+       	  <li>An infrastructure of opportunities for members to get to know one another, share ideas, and learn and develop trust with increased efficiency.</li>
+	  </ul>
+	<p class="font_orange"><span class="list_others"><strong></strong></span><strong>Enhancing our Economy: </strong></p>
+	<p class="list_others">The  ReSearch Profile system (RSP) is a response to the Texas Industry and  Technology clusters in order to facilitate problem solving,  collaboration, and technology transfer among research experts and  organizations in Academia, Industry and Government. The goal of RSP is  to become a synergistic marketplace to transfer knowledge, provide  experts to solve problems, and expand innovation capacity in order to  build new or expand existing markets, provide job growth and develop  wealth. </p>
+	<p class="font_orange"><strong>Academia&rsquo;s new role: </strong></p>
+	<p class="list_others">RSP  is a method to transform the culture of Academia to becoming sellers  and marketers of research and ideas. The role of academia is catalyzing  the transfer of knowledge and creating an environment for the rapid  deployment of that knowledge by speeding the movement of ideas,  innovation and information throughout the marketplace and the economy. <strong>Universities are the nation&rsquo;s greatest &ldquo;untapped&rdquo; resources for spurring economic growth!</strong></p>
+	<p><span class="font_orange"><strong>RSP hosts the following profiles:&nbsp;</strong></span><span class="details">(click on the profile type to learn more about it)</span>	  </p>
+    <ul style="list-style:none" class="list_others">
+		    <li><img src="../images/bullets/faculty.gif" alt="1." width="12" height="12" />&nbsp;<a href="faculty.htm">Faculty Profiles</a></li>
+		    <li><img src="../images/bullets/center.gif" alt="2." width="12" height="12" />&nbsp;<a href="center.htm">Research Center Profiles</a></li>
+		    <li><img src="../images/bullets/technology.gif" alt="3." width="12" height="12" />&nbsp;<a href="technology.htm">Technology/Intellectual Property Profiles</a></li>
+		    <li><img src="../images/bullets/equipment.gif" alt="4." width="12" height="12" />&nbsp;<a href="equipment.htm">Equipment Profiles</a></li>
+		    <li><img src="../images/bullets/facility.gif" alt="5." width="12" height="12" />&nbsp;<a href="facility.htm">Facility Profiles</a></li>
+		    <li><img src="../images/bullets/labgroup.gif" alt="6." width="12" height="12" />&nbsp;<a href="lab.htm">Research Labs/Group Profiles</a></li>
+	</ul>
+   <br />
+	<!-- InstanceEndEditable -->	</td>
+  </tr>
+</table>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="table_background">&nbsp;</td>
+  </tr>
+  <!-- footer content goes here -->
+  <tr>
+    <td bgcolor="#D7CFCD"><div align="center"><font size="2" class="form_elements_row_action">&copy; 2005<a href="http://www.uta.edu/" target="www.uta.edu">The University of Texas at Arlington</a> | 
+  Research Administration | Questions or Comments about this site? Email: <a href="http://www.uta.edu/ra/siteHelp.html">webmaster</a>  | Wednesday , February 01, 2006<br />
+    </font></div></td>
+<!--end of footer -->
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

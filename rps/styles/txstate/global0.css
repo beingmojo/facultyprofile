@@ -1,0 +1,82 @@
+/*  Document   : global
+    Created on : Jun 3, 2010, 3:09:19 PM
+    Author     : Olalekan Sopeju
+    Description: Style meant for general use throughout the application
+*/
+
+/*Body*/
+body {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    font-size:12px;
+}
+/*Heading*/
+h1 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:20px;
+}
+h2 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:18px;
+}
+h3 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:16px;
+}
+h4 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:15px;
+}
+h5 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:14px;
+}
+h6 {
+    background-color:#FFFFFF;
+    font-family:times,sans-serif;
+    color:maroon;
+    font-size:13px;
+}
+/*Horizontal Rule*/
+hr {
+    color:#CCCCCC;
+    height:1px;
+}
+/*Paragragh*/
+p {
+    font-size:12px;
+    margin-left:5px;
+}
+/*A-HREF*/
+a {
+    /*background-color:#FFFFFF;*/
+    font-family:times,sans-serif;
+    font-size:12px;
+    color:#444444;
+}
+a:link {
+    text-decoration:none;
+    color:#444444;
+}
+a:visited {
+    text-decoration:none;
+    color:#444444;
+}
+a:hover {
+    text-decoration:underline;
+    color:#444444;
+}
+a:active {
+    text-decoration:none;
+    color:#444444;
+}

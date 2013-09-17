@@ -1,0 +1,11 @@
+
+ <?php require_once('connection/dbc.php'); ?>
+
+<?php
+mysql_query("CREATE TABLE user(username VARCHAR(30),  password VARCHAR(20), FirstName VARCHAR(40), LastName VARCHAR(40), Phone VARCHAR(20), Email VARCHAR(60), User_Type VARCHAR(30), Department VARCHAR(50), Rank VARCHAR(50), Major VARCHAR(100), TrainingType VARCHAR(100), HSP_Number VARCHAR(50))")
+
+or die("Create table Error: ".mysql_error());
+echo "User table created";
+mysql_close($con);
+ 
+?>

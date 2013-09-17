@@ -1,0 +1,35 @@
+<html><head><title></title></head><body>
+
+<?php
+$appNum="myapp2";
+if ($_POST["fileUp"] == "yes"){
+if ($_FILES["file"]["error"] > 0)
+  {
+  echo "Error: " . $_FILES["file"]["error"] . "<br />";
+  }
+else
+  {
+  echo "File Uploaded: " . $_FILES["file"]["name"] . "<br />";
+  echo "Type: " . $_FILES["file"]["type"] . "<br />";
+  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+  //echo "Temp File Folder Used: " . $_FILES["file"]["tmp_name"];
+  echo "<br>";
+  }
+
+mkdir("appdoc/".$appNum);
+
+     
+      move_uploaded_file($_FILES["file"]["tmp_name"], "appdoc/" .$appNum."/". $_FILES["file"]["name"]);
+     // echo "Stored in: " . "appdoc/" . $_FILES["file"]["name"];
+     
+}
+?>
+   <form action="uploader.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
+<input type="hidden" name="fileUp" value="yes" id="fileUp">
+  <label>More File to Upload:<br> 
+  <input type="file" name="file" /> 
+  </label>
+   <input type="submit" name="Submit" value="Submit" /></form>
+	
+  </body> 
+</html>

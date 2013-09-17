@@ -1,0 +1,9 @@
+<?
+include 'dbc.php' 
+$sql="INSERT INTO security (ID, SecurityCode) VALUES ('irb001','abcdIRB')";
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
+  }
+echo "1 record added";mysql_close($con)
+?>

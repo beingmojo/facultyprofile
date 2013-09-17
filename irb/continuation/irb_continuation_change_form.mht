@@ -1,0 +1,720 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: irb_continuation_change_form
+Date: Fri, 2 Nov 2007 17:42:13 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0050_01C81D77.B3F96980"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3198
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0050_01C81D77.B3F96980
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.txstate.edu/research/irb/irb_continuation_change_form.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML =
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>irb_continuation_chan=
+ge_form</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<SCRIPT type=3Dtext/JavaScript>
+<!--
+function FDK_StripChars(theFilter,theString)
+{
+	var strOut,i,curChar
+
+	strOut =3D ""
+	for (i=3D0;i < theString.length; i++)
+	{	=09
+		curChar =3D theString.charAt(i)
+		if (theFilter.indexOf(curChar) < 0)	// if it's not in the filter, send =
+it thru
+			strOut +=3D curChar	=09
+	}=09
+	return strOut
+}
+
+function FDK_AllInRange(x,y,theString)
+{
+	var i, curChar
+=09
+	for (i=3D0; i < theString.length; i++)
+	{
+		curChar =3D theString.charAt(i)
+		if (curChar < x || curChar > y) //the char is not in range
+			return false
+	}
+	return true
+}
+
+function FDK_reformat(s)
+{
+    var arg;
+    var sPos =3D 0;
+    var resultString =3D "";
+
+    for (var i =3D 1; i < FDK_reformat.arguments.length; i++) {
+       arg =3D FDK_reformat.arguments[i];
+       if (i % 2 =3D=3D 1)=20
+           resultString +=3D arg;
+       else=20
+       {
+           resultString +=3D s.substring(sPos, sPos + arg);
+           sPos +=3D arg;
+       }
+    }
+    return resultString;
+}
+
+function =
+FDK_AddToValidateArray(FormName,FormElement,Validation,SetFocus)
+{
+    var TheRoot=3Deval("document."+FormName);
+=20
+    if (!TheRoot.ValidateForm)=20
+    {
+        TheRoot.ValidateForm =3D true;
+        eval(FormName+"NameArray =3D new Array()")
+        eval(FormName+"ValidationArray =3D new Array()")
+        eval(FormName+"FocusArray =3D new Array()")
+    }
+    var ArrayIndex =3D eval(FormName+"NameArray.length");
+    eval(FormName+"NameArray[ArrayIndex] =3D FormElement");
+    eval(FormName+"ValidationArray[ArrayIndex] =3D Validation");
+    eval(FormName+"FocusArray[ArrayIndex] =3D SetFocus");
+=20
+}
+
+function FDK_ValidateEmail(FormElement,Required,ErrorMsg)
+{
+   var msg =3D "";
+   var val =3D FormElement.value;
+   var msgInvalid =3D ErrorMsg;
+
+   var theLen =3D FDK_StripChars(" ",val).length
+   if (theLen =3D=3D 0)	     {
+     if (!Required) return "";
+     else return msgInvalid;
+   }
+
+   if (val.indexOf("@",0) < 0 || val.indexOf(".")<0)=20
+   {
+      msg =3D msgInvalid;
+   }
+   return msg;
+}
+
+function =
+FDK_AddEmailValidation(FormName,FormElementName,Required,SetFocus,ErrorMs=
+g)  {
+  var ValString =3D =
+"FDK_ValidateEmail("+FormElementName+","+Required+","+ErrorMsg+")"
+  =
+FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)=
+
+}
+
+function FDK_ValidateNonBlank(FormElement,ErrorMsg)
+{
+  var msg =3D ErrorMsg;
+  var val =3D FormElement.value; =20
+
+  if (!(FDK_StripChars(" \n\t\r",val).length =3D=3D 0))
+  {
+     msg=3D"";
+  }
+
+  return msg;
+}
+
+function =
+FDK_AddNonBlankValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString =3D =
+"FDK_ValidateNonBlank("+FormElementName+","+ErrorMsg+")"
+  =
+FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)=
+
+}
+
+function FDK_ValidateRadio(RadioGroup,ErrorMsg)
+{
+	var msg =3D ErrorMsg;
+
+    for (x=3D0;x<RadioGroup.length;x++)  {
+		if (RadioGroup[x].checked)  {
+			msg=3D""
+		}=20
+	}
+	return msg;
+}
+
+function =
+FDK_AddRadioValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString =3D =
+"FDK_ValidateRadio("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName + =
+'[0]'),ValString,SetFocus)
+}
+
+function FDK_Validate(FormName, stopOnFailure, AutoSubmit, ErrorHeader)
+{
+ var theFormName =3D FormName;
+ var theElementName =3D "";
+ if (theFormName.indexOf(".")>=3D0) =20
+ {
+   theElementName =3D theFormName.substring(theFormName.indexOf(".")+1)
+   theFormName =3D theFormName.substring(0,theFormName.indexOf("."))
+ }
+ var ValidationCheck =3D eval("document."+theFormName+".ValidateForm")
+ if (ValidationCheck) =20
+ {
+  var theNameArray =3D eval(theFormName+"NameArray")
+  var theValidationArray =3D eval(theFormName+"ValidationArray")
+  var theFocusArray =3D eval(theFormName+"FocusArray")
+  var ErrorMsg =3D "";
+  var FocusSet =3D false;
+  var i
+  var msg
+   =20
+=20
+        // Go through the Validate Array that may or may not exist
+        // and call the Validate function for all elements that have =
+one.
+  if (String(theNameArray)!=3D"undefined")
+  {
+   for (i =3D 0; i < theNameArray.length; i ++)
+   {
+    msg=3D"";
+    if (theNameArray[i].name =3D=3D theElementName || theElementName =
+=3D=3D "")
+    {
+      msg =3D eval(theValidationArray[i]);
+    }
+    if (msg !=3D "")
+    {
+     ErrorMsg +=3D "\n"+msg;                  =20
+     if (stopOnFailure =3D=3D "1")=20
+     {
+       if (theFocusArray[i] && !FocusSet) =20
+      {
+       FocusSet=3Dtrue;
+       theNameArray[i].focus();
+      }
+      alert(ErrorHeader+ErrorMsg);
+      document.MM_returnValue =3D false;=20
+      break;
+     }
+     else =20
+     {
+      if (theFocusArray[i] && !FocusSet) =20
+      {
+       FocusSet=3Dtrue;
+       theNameArray[i].focus();
+      }
+     }
+    }
+   }
+  }
+  if (ErrorMsg!=3D"" && stopOnFailure !=3D "1")=20
+  {
+   alert(ErrorHeader+ErrorMsg);
+  }
+  document.MM_returnValue =3D (ErrorMsg=3D=3D"");=20
+  if (document.MM_returnValue && AutoSubmit) =20
+  {
+   eval("document."+FormName+".submit()")
+  }
+ }
+}
+//-->
+</SCRIPT>
+<LINK href=3D"http://www.txstate.edu/research/css/forms.css" =
+type=3Dtext/css=20
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.16544" name=3DGENERATOR></HEAD>
+<BODY=20
+onload=3D"FDK_AddEmailValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.SenderEmail',true,true,'\'Please enter a =
+valid e-mail address under Section 1, Question 1. (a valid e-mail =
+address has an \\\'@\\\' and a =
+\\\'.\\\')\'');FDK_AddNonBlankValidation('irb_continuation_change_form','=
+document.irb_continuation_change_form.SenderFirstName',true,'\'Please =
+enter your first name under Section 1, Question =
+1.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.SenderName',true,'\'Please enter your last =
+name under Section 1, Question =
+1.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.SenderPhone',true,'\'Please enter your =
+phone number under Section 1, Question =
+1.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.SenderPhoneExt',true,'\'Please enter your =
+phone number extension (enter N/A if you have none)  under Section 1, =
+Question =
+1.\'');FDK_AddRadioValidation('irb_continuation_change_form','document.ir=
+b_continuation_change_form.userStatus',true,'\'Please choose an answer =
+under Section 1, Question =
+2.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.IRBReferenceNumber',true,'\'Please enter =
+your original IRB Reference Number under Section 1, Question =
+4.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.ProjectTitle',true,'\'Please enter the =
+title of your project under Section 1, Question =
+5.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.FunderName',true,'\'Please enter the name =
+of the project funder under Section 1, Question 7.  Enter =
+&quot;N/A&quot; if your project is not =
+funded.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','doc=
+ument.irb_continuation_change_form.GrantIDNumber',true,'\'Please enter =
+the grant ID number of your project under Section 1, Question 7.  Enter =
+&quot;N/A&quot; if your project is not =
+funded.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','doc=
+ument.irb_continuation_change_form.LengthOfProject',true,'\'Please enter =
+the length of your project period under Section 1, Question 7.  Enter =
+&quot;N/A&quot; if your project is not =
+funded.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','doc=
+ument.irb_continuation_change_form.SupervisorFirstName',true,'\'Please =
+enter the first name of your supervisor if you are a student  under =
+Section 1, Question 3.  Enter &quot;N/A&quot; if you are not a =
+student.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','do=
+cument.irb_continuation_change_form.SupervisorLastName',true,'\'Please =
+enter the last name of your supervisor if you are a student  under =
+Section 1, Question 3.  Enter &quot;N/A&quot; if you are not a =
+student.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','do=
+cument.irb_continuation_change_form.SupervisorPhoneNumber',true,'\'Please=
+ enter the phone number of your supervisor if you are a student  under =
+Section 1, Question 3.  Enter &quot;N/A&quot; if you are not a =
+student.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','do=
+cument.irb_continuation_change_form.SenderPhoneExt',true,'\'Please enter =
+the phone number extension of your supervisor if you are a student  =
+under Section 1, Question 3.  Enter &quot;N/A&quot; if you are not a =
+student.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','do=
+cument.irb_continuation_change_form.SupervisorEmail',true,'\'Please =
+enter the email address  for your supervisor if you are a student  under =
+Section 1, Question 3.  Enter &quot;N/A&quot; if you are not a =
+student.\'');FDK_AddRadioValidation('irb_continuation_change_form','docum=
+ent.irb_continuation_change_form.IRBDecisionHardCopy',true,'\'Please =
+choose an answer under Section 1, Question =
+8.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.StudyStatusExplanation',true,'\'Please =
+enter an explanation if you have chosen &quot;other&quot; under Section =
+2, Question 1; if not,  please enter =
+N/A.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','docume=
+nt.irb_continuation_change_form.NumberOfParticipantsApproved',true,'\'Ple=
+ase enter the total number of participants approved for your study under =
+Section 2, Question =
+2.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.ParticipantsEnrolledSinceLastReview',true,'=
+\'Please enter the number of participants enrolled since your last IRB =
+review under Section 2, Question =
+3.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.ParticipantsEnrolledToDate',true,'\'Please =
+enter the number of participants enrolled to date in your study under =
+Section 2, Question =
+4.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.DifferentEnrollmentExplanation',true,'\'Ple=
+ase enter an explanation under Section 2, Question 5 or enter N/A if not =
+applicable.\'');FDK_AddRadioValidation('irb_continuation_change_form','do=
+cument.irb_continuation_change_form.RelationshipChange',true,'\'Please =
+make a selection under Section 2, Question =
+6.\'');FDK_AddRadioValidation('irb_continuation_change_form','document.ir=
+b_continuation_change_form.PIChange',true,'\'Please make a selection =
+under Section 2, Question =
+7.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.PIChangeExplanation',true,'\'Please offer =
+an explanation under Section 2, Question 7 if you answered =
+&quot;yes&quot;; if not please enter =
+N/A.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','docume=
+nt.irb_continuation_change_form.ResultsSummary',true,'\'Please enter a =
+summary of preliminary information regarding any results/trends of your =
+study under Section 2, Question =
+8.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','document=
+.irb_continuation_change_form.UnanticpatedProblems',true,'\'Please =
+explain any unanticipated problems in conducting your study; or enter =
+N/A if you have not experienced =
+any.\'');FDK_AddRadioValidation('irb_continuation_change_form','document.=
+irb_continuation_change_form.RiskBenefitChange',true,'\'Please make a =
+selection under Section 2, Question =
+10.\'');FDK_AddNonBlankValidation('irb_continuation_change_form','documen=
+t.irb_continuation_change_form.RiskBenefitChangedExplanation',true,'\'Ple=
+ase describe what has changed from the initial expectations in term of =
+risk/benefit relationship for subjects under Section 2, Question 10; if =
+none (selection of &quot;no&quot; above) please enter =
+&quot;none&quot;\'');FDK_AddNonBlankValidation('irb_continuation_change_f=
+orm','document.irb_continuation_change_form.ChangesInStudySinceApproval',=
+true,'\'Please list and explain any changes in the study or study period =
+under Section 2, Question 11; if none, please enter N/A.\'')">
+<H1 class=3Dh1b>IRB Continuation/Change Form</H1>
+<P>&nbsp;</P>
+<FORM id=3Dirb_continuation_change_form =
+name=3Dirb_continuation_change_form=20
+onsubmit=3D"FDK_Validate('irb_continuation_change_form',false,false,'The =
+Form Could Not Be Submitted\n\n');return document.MM_returnValue"=20
+action=3Dhttp://apps.its.txstate.edu/formemailer.pl method=3Dpost>
+<H2><INPUT type=3Dhidden value=3Dospirb@txstate.edu =
+name=3DDestinationEmail> <INPUT=20
+type=3Dhidden=20
+value=3Dhttp://www.txstate.edu/research/irb/Irb_continuation_form_submitt=
+ed.php=20
+name=3Dthankyoupage> <INPUT id=3Dmessagesubject type=3Dhidden=20
+value=3D"Confirmation-IRB Continuation/Change" name=3Dmessagesubject> =
+<INPUT=20
+type=3Dhidden value=3Dsend-to-sender name=3Doptions> Section 1 </H2>
+<P>&nbsp;</P>
+<P>&nbsp;1. Please provide</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; First Name <INPUT id=3DSenderFirstName=20
+name=3DSenderFirstName> &nbsp; Last Name <INPUT id=3DSenderName =
+name=3DSenderName>=20
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; Phone Number <INPUT id=3DSenderPhone =
+size=3D12=20
+name=3DSenderPhone> &nbsp; Extension <INPUT id=3DSenderPhoneExt =
+size=3D15=20
+value=3D"-N/A if no ext.-" name=3DSenderPhoneExt> &nbsp;&nbsp;Email =
+<INPUT=20
+id=3DSenderEmail size=3D35 name=3DSenderEmail> </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp; **Please check to be sure your phone number and =
+email=20
+address are correct. </P>
+<P>&nbsp;</P>
+<P>&nbsp;2.&nbsp; Are you a</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3D"Faculty Member" =
+
+name=3DuserStatus> Faculty Member </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3D"Staff Member"=20
+name=3DuserStatus> Staff Member</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DStudent =
+name=3DuserStatus>=20
+Student</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DOther =
+name=3DuserStatus>=20
+Other</P>
+<P>&nbsp;</P>
+<P>&nbsp;3.&nbsp; If you are a student, please supply the contact =
+information=20
+for your supervising faculty member:&nbsp;(leave N/A in all fields if =
+you are=20
+not a student.) </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First Name <INPUT =
+id=3DSupervisorFirstName=20
+value=3D"N/A if NOT a student" name=3DSupervisorFirstName> &nbsp; Last =
+Name <INPUT=20
+id=3DSupervisorLastName value=3D"N/A if NOT a student" =
+name=3DSupervisorLastName> </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone Number <INPUT =
+id=3DSupervisorPhoneNumber=20
+value=3D"N/A if Not a student" name=3DSupervisorPhoneNumber> &nbsp; =
+Extension <INPUT=20
+id=3DSupervisorPhoneExtension size=3D15 value=3D"-N/A if no ext.-"=20
+name=3DSupervisorPhoneExtension> &nbsp;&nbsp;Email <INPUT =
+id=3DSupervisorEmail=20
+size=3D35 value=3D"N/A if NOT a student" name=3DSupervisorEmail> </P>
+<P>&nbsp;</P>
+<P>&nbsp;4.&nbsp; Original IRB Reference Number&nbsp;&nbsp;&nbsp; <INPUT =
+
+id=3DIRBReferenceNumber size=3D35 name=3DIRBReferenceNumber> </P>
+<P>&nbsp;</P>
+<P>&nbsp;5.&nbsp;&nbsp;Project Title&nbsp; <INPUT id=3DProjectTitle =
+size=3D35=20
+name=3DProjectTitle> </P>
+<P>&nbsp;</P>
+<P>&nbsp;6.&nbsp; Project Type&nbsp;&nbsp;&nbsp; <SELECT =
+id=3DProjectType=20
+name=3DProjectType> <OPTION value=3D"Choose One" selected>Choose =
+One</OPTION>=20
+  <OPTION value=3DAcademic/Class>Academic/Class</OPTION> <OPTION=20
+  value=3D"Funded Research">Funded Research</OPTION> <OPTION=20
+  value=3D"Non-funded Research">Non-funded Research</OPTION> <OPTION=20
+  value=3DInstitutional/Admin>Institutional/Admin.</OPTION></SELECT> =
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;7.&nbsp; If your project is funded:</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State the name of the funder: <INPUT=20
+id=3DFunderName size=3D55 value=3D"N/A if not funded" name=3DFunderName> =
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State the grant ID=20
+number:&nbsp;&nbsp;&nbsp;&nbsp; <INPUT id=3DGrantIDNumber size=3D30=20
+value=3D"N/A if not funded" name=3DGrantIDNumber> </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State the length of project =
+period:&nbsp;=20
+<INPUT id=3DLengthOfProject size=3D30 value=3D"N/A if not funded"=20
+name=3DLengthOfProject> </P>
+<P>&nbsp;</P>
+<P>&nbsp;8.&nbsp; You will be informed of the IRB's decision via =
+email</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you require a signed hard copy of =
+the IRB's=20
+decision for your records?&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio =
+value=3DYes=20
+name=3DIRBDecisionHardCopy> Yes&nbsp;&nbsp;&nbsp;&nbsp; <INPUT =
+type=3Dradio value=3DNo=20
+name=3DIRBDecisionHardCopy> No</P>
+<P>&nbsp;</P>
+<P></P>
+<H2><SPAN class=3Dquestionsection>Section 2 </SPAN></H2>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P>&nbsp;1.&nbsp; What is the status of your study?</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SELECT id=3DStudyStatus =
+name=3DStudyStatus>=20
+  <OPTION selected>Choose One</OPTION> <OPTION value=3D"Data Analysis =
+Only">Data=20
+  Analysis Only</OPTION> <OPTION value=3D"Study on Hold">Study on =
+Hold</OPTION>=20
+  <OPTION value=3D"Study Not Begun">Study Not Begun</OPTION> <OPTION=20
+  value=3D"Following Subjects">Following Subjects</OPTION> <OPTION=20
+  value=3D"Recruiting Subjects">Recruiting Subjects</OPTION> <OPTION=20
+  value=3D"Other - Explain in Next Box">Other - Explain in Next=20
+Box</OPTION></SELECT> &nbsp;&nbsp;&nbsp; </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you chose "Other", please provide =
+an=20
+explanation: </P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <TEXTAREA id=3DStudyStatusExplanation =
+name=3DStudyStatusExplanation cols=3D55>N/A if "Other" is not chosen as =
+the status of the study.</TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;2. Total number of participants =
+<EM><STRONG>approved</STRONG></EM> for=20
+the study: <INPUT id=3DNumberOfParticipantsApproved size=3D15=20
+name=3DNumberOfParticipantsApproved> </P>
+<P>&nbsp;</P>
+<P>&nbsp;3. Number of participants <EM><STRONG>enrolled since last IRB =
+review=20
+(continuing or initial)</STRONG></EM>:&nbsp; <INPUT=20
+id=3DParticipantsEnrolledSinceLastReview size=3D15=20
+name=3DParticipantsEnrolledSinceLastReview> </P>
+<P> </P>
+<P>&nbsp;4. Number of participants <EM><STRONG>enrolled in the study to =
+date=20
+</STRONG></EM>:&nbsp; <INPUT id=3DParticipantsEnrolledToDate size=3D15=20
+name=3DParticipantsEnrolledToDate> <SPAN=20
+class=3Drepmenu><STRONG></STRONG></SPAN></P>
+<P>&nbsp;</P>
+<P>&nbsp;5. If actual total enrollment is different from the original =
+project=20
+enrollment, provide an explanation:</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp; <TEXTAREA id=3DDifferentEnrollmentExplanation =
+name=3DDifferentEnrollmentExplanation cols=3D65>N/A if there is no =
+difference in total enrollment</TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;6.&nbsp; Has your relationship with the study sponsor changed =
+since the=20
+IRB review in any way which might require conflict of interest =
+disclosure (e.g.=20
+stock purchases, royalty payments, patents, Board position, etc.)??</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DYes =
+name=3DRelationshipChange>=20
+Yes</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DNo =
+name=3DRelationshipChange>=20
+No</P>
+<P>&nbsp;</P>
+<P>&nbsp;7.&nbsp; Have there been any changes in Principal Investigator, =
+
+Co-Investigators or staff?</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DYes =
+name=3DPIChange>=20
+Yes</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp; &nbsp; <INPUT type=3Dradio value=3DNo =
+name=3DPIChange> No</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<STRONG> If yes,</STRONG> please=20
+explain:</P>
+<P>&nbsp;&nbsp;&nbsp; &nbsp; <TEXTAREA id=3DPIChangeExplanation =
+name=3DPIChangeExplanation cols=3D65>N/A if answer above is =
+"No"</TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;8.&nbsp; Summarize preliminary information about any results =
+and/or=20
+trends (DO NOT LEAVE BLANK):</P>
+<P>&nbsp;</P>
+<P></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <TEXTAREA id=3DResultsSummary =
+name=3DResultsSummary rows=3D6 cols=3D65></TEXTAREA> </P>
+<P>&nbsp;</P>
+<P></P>
+<P>&nbsp;9.&nbsp; Describe any unanticipated problems in the conduct of =
+the=20
+study (if none, state "none"):</P>
+<P>&nbsp;</P>
+<P></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <TEXTAREA id=3DUnanticpatedProblems =
+name=3DUnanticpatedProblems rows=3D6 cols=3D65>State "None"  if no =
+unanticipated problems have occurred</TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>10.&nbsp; Has the risk/benefit relationship for subjects changed from =
+the=20
+initial expectation?</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type=3Dradio value=3DYes=20
+name=3DRiskBenefitChange> Yes</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp; &nbsp; <INPUT type=3Dradio value=3DNo =
+name=3DRiskBenefitChange>=20
+No</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<STRONG> If yes,</STRONG> =
+describe what=20
+has changed from the initial expectations:</P>
+<P>&nbsp;&nbsp;&nbsp; &nbsp; <TEXTAREA =
+id=3DRiskBenefitChangedExplanation name=3DRiskBenefitChangedExplanation =
+rows=3D6 cols=3D65>N/A if "No" is chosen above</TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<P>11.&nbsp; List and Explain any other changes in the study or study =
+period=20
+originally approved by the IRB (if none, state "none"):</P>
+<P>&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <TEXTAREA =
+id=3DChangesInStudySinceApproval name=3DChangesInStudySinceApproval =
+rows=3D6 cols=3D65></TEXTAREA>=20
+</P>
+<P>&nbsp;</P>
+<H6>&nbsp;&nbsp;&nbsp;**Please note: All current consent/assent forms, =
+even if=20
+unchanged from original submission, should be submitted directly to the =
+OSP IRB=20
+administrator, via email or hard copy. Please include your name and IRB=20
+reference number on all documents. <BR><BR></H6>
+<H6>Please check your answers carefully before submitting.</H6>
+<H6>&nbsp;</H6>
+<H6 align=3Dleft>Completed submissions will result in a confirmation =
+email which=20
+will contain your data as submitted to the email address you provided.. =
+If you=20
+do not receive a confirmation, please contact OSP at 245-2102. </H6>
+<H6 align=3Dleft>&nbsp;</H6>
+<H6 align=3Dleft>&nbsp;Wait until the server acknowledges processing =
+your form=20
+before leaving this page. </H6>
+<H6 align=3Dleft>&nbsp;</H6>
+<H6 align=3Dleft>Thank you for your cooperation. </H6>
+<P>&nbsp;</P>
+<P align=3Dcenter><INPUT type=3Dsubmit value=3D"Submit Form" =
+name=3DSubmit> &nbsp;</P>
+<P>&nbsp;</P></FORM>
+<P>&nbsp;</P></BODY></HTML>
+
+------=_NextPart_000_0050_01C81D77.B3F96980
+Content-Type: application/x-css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.txstate.edu/research/css/forms.css
+
+BODY {
+	BACKGROUND: #eeeeee; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:link {
+	COLOR: #997d5b
+}
+A:visited {
+	COLOR: #997d5b
+}
+A:active {
+	COLOR: #996633
+}
+A:hover {
+	COLOR: #996666
+}
+H1 {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 14pt; MARGIN-BOTTOM: =
+0px; WORD-SPACING: 0px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: =
+Arial, Helvetica, sans-serif
+}
+H2 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+italic 12pt/100% Arial, Helvetica, sans-serif; COLOR: #334d55
+}
+H3 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+12pt/100% Arial, Helvetica, sans-serif; COLOR: #ffffff
+}
+H4 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; FONT: bold italic 11pt/100% Arial, =
+Helvetica, sans-serif
+}
+H5 {
+	MARGIN-TOP: 4px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: =
+4px; WORD-SPACING: 0px; COLOR: #000000; LINE-HEIGHT: 100%; FONT-FAMILY: =
+Arial, Helvetica, sans-serif
+}
+H6 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+italic 10pt/100% Arial, Helvetica, sans-serif; COLOR: #334d55
+}
+.explanation {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: =
+normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 14px Arial, Helvetica, sans-serif; COLOR: #000000; =
+PADDING-TOP: 0px
+}
+.iacuccerts {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #334d55
+}
+.submitstatement {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #ffffff; LINE-HEIGHT: =
+normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.section {
+	FONT-WEIGHT: bold; FONT-SIZE: 24px; COLOR: #996633; LINE-HEIGHT: 24px; =
+FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.randomnumbers {
+	FONT: x-large/18px Arial, Helvetica, sans-serif; COLOR: #cc0000
+}
+.form_pageName {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; BACKGROUND: =
+url(../images/pagename_bg.gif); PADDING-BOTTOM: 14px; MARGIN: 0px; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #ccd2d2 1px solid
+}
+.form_pageName H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 175% Arial, sans-serif; COLOR: #ffffff; PADDING-TOP: 0px
+}
+.form_pageName H4 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 80% Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; =
+PADDING-TOP: 0px
+}
+.form_pageName IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; RIGHT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative; TOP: 0px
+}
+
+------=_NextPart_000_0050_01C81D77.B3F96980--

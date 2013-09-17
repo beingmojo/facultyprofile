@@ -1,0 +1,1471 @@
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/meta.css */
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/common/css/meta.css */
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/common/css/dropshadow.css */
+
+.dropshadow {
+	clear: both;
+	position: absolute;
+	top: 0px;
+	left: -3px;
+	right: -3px;
+	bottom: -6px;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.dropshadow-bottom {
+	position: absolute;
+	bottom: 0px;
+	left: 6px;
+	right: 6px;
+	height: 6px;
+	background: url(../images/drop-shadow.png) no-repeat;
+	overflow: hidden;
+}
+
+.dropshadow-left {
+	position: absolute;
+	left: 0px;
+	top: 6px;
+	bottom: 6px;
+	width: 3px;
+	background: url(../images/drop-shadow-left.png) no-repeat;
+}
+.dropshadow-right {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+	bottom: 6px;
+	width: 3px;
+	background: url(../images/drop-shadow-right.png) no-repeat;
+}
+
+.dropshadow-lefttop {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 3px;
+	height: 6px;
+	background: url(../images/drop-shadow-topleft.png) no-repeat;
+	overflow: hidden;
+}
+.dropshadow-righttop {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 3px;
+	height: 6px;
+	background: url(../images/drop-shadow-topright.png) no-repeat;
+	overflow: hidden;
+}
+.dropshadow-leftcorner {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 6px;
+	height: 6px;
+	background: url(../images/drop-shadow-leftcorner.png) no-repeat;
+	overflow: hidden;
+}
+.dropshadow-rightcorner {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 6px;
+	height: 6px;
+	background: url(../images/drop-shadow-rightcorner.png) no-repeat;
+	overflow: hidden;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/common/css/yahoo-ui-reset.css */
+
+/*
+Copyright (c) 2007,
+ Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.2.1
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+fieldset,
+img {
+	border:0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+em {
+	font-style:normal;
+}
+
+strong {
+	font-weight:normal;
+}
+	
+
+ol,
+ul  {
+	list-style:none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+q:before,
+q:after {
+	content:'';
+}
+
+abbr,
+acronym  {
+	border:0;
+}
+
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate/css/meta.css */
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate/css/khan-bannerlinks.css */
+
+.txst-mainsite-banner-links {
+	position: absolute;
+	top: 64px;
+	right: 0px;
+}
+
+.txst-mainsite-banner-links a {
+	display: block;
+	float: left;
+	width: auto;
+	font-size: 11px;
+	text-decoration: none;
+	color: #777777;
+	text-align: center;
+	padding: 0px 14px;
+	border-left: 1px solid #e0d1b1;
+}
+
+.txst-mainsite-banner-links a:hover {
+	text-decoration: underline;
+}
+
+a.txst-mainsite-banner-link-left {
+	border-left: 0px !important;
+}
+
+a.txst-mainsite-banner-link-right {
+	padding-right: 0px !important;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate/css/khan-webtools.css */
+
+.txst-mainsite-banner {
+	position: relative;
+	z-index: 50;
+}
+
+.txst-banner-toolsandsearch {
+	position: absolute;
+	top: 33px;
+	right: 0px;
+	z-index: 1;
+	font-family: Arial;
+	height: 24px;
+	width: 300px;
+	overflow: visible;
+}
+
+.txst-banner-webtools-searchbg {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: url(../images/webtools-home-submit.png) right no-repeat;
+	width: 41px;
+	height: 24px;
+	z-index: 3;
+}
+
+.txst-banner-webtools-menuheader {
+	width: 106px;
+	height: 24px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+}
+
+.txst-banner-webtools-menuheader a {
+	display: block;
+	padding: 6px 0px 6px 13px;
+	height: 12px;
+	font-size: 11px;
+	line-height: 12px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background: url(../images/webtools-home-button.png) no-repeat;
+}
+
+.txst-banner-webtools-menuheader a:hover {
+	text-decoration: none !important;
+}
+
+.txst-banner-webtools-menuitems {
+	position: absolute;
+	top: 21px;
+	left: 4px;
+	z-index: 1;
+	width: 106px;
+	overflow: visible;
+	display: none;
+}
+
+.txst-banner-webtools-menuitems .png-bg {
+	width: 106px;
+	padding: 12px 0px 4px 0px;
+	background: url(txstate/../images/webtools-home-menubg.png) no-repeat;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.txst-banner-webtools-menuitem {
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.txst-banner-webtools-menuitem a {
+	position: relative;
+	display: block;
+	color: white;
+	padding: 3px 9px;
+	text-decoration: none;
+}
+
+.txst-banner-webtools-menuitem a:hover {
+	text-decoration: none;
+	background-color: #4a4333;
+}
+
+.txst-banner-webtools-menuitem img {
+	border: 0px;
+}
+
+.txst-banner-search {
+	position: absolute;
+	left: 106px;
+	top: 0px;
+	width: 186px;
+	height: 24px;
+	padding-left: 4px;
+	z-index: 2;
+	background: url(../images/webtools-home-bg-noalpha.png) repeat-x;
+}
+
+.txst-banner-search input {
+	border: 0px;
+	width: 150px;
+	height: 14px;
+	margin-top: 4px;
+	line-height: 14px;
+}
+
+.txst-banner-webtools-searchbg .txst-banner-toolssearchbutton {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	float: right;
+	margin: 5px 8px 0px 0px;
+	background: url(../images/webtools-magnify.png) no-repeat;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate/css/khan-txstate.css */
+
+a {	text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/khan-home.css */
+
+body {
+	font-family: "Nimbus Sans L", Arial, Helvetica, sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+
+img {
+	border: 0px;
+}
+
+.txst-mainsite-frame {
+	position: relative;
+	width: 904px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.txst-mainsite-invisibleheader {
+	display: none;
+}
+
+.txst-mainsite-alert {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.txst-mainsite-alert a {
+	font-size: 16px;
+	color: red;
+	text-decoration: none;
+}
+
+.txst-mainsite-banner {
+	padding-top: 14px;
+	padding-left: 8px;
+	padding-bottom: 8px;
+}
+
+.txst-mainsite-eventsandlinkscontainer {
+	position: relative;
+	clear: both;
+	height: 210px;
+}
+
+.txst-mainsite-systemstatement {
+	position: absolute;
+	right: 0px;
+	top: 14px;
+	width: 50%;
+	color: #5b2e33;
+	font-size: 11px;
+	font-family: serif;
+	font-style: italic;
+	text-align: right;
+}
+
+.txst-mainsite-systemstatementcontainer {
+	position: relative;
+	height: 27px;
+}
+.txst-mainsite-systemstatementcontainer a {
+	color: #5b2e33;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+.txst-mainsite-givetotexasstate {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 50%;
+	text-align: right;
+}
+
+.txst-meetus {
+	color: #521515;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 10px;
+	width: 50%;
+}
+
+.txst-meetus a {
+	position: absolute;
+	top: 0px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(txstate-home/../images/social_sprite.gif) no-repeat;
+}
+
+.txst-meetus .facebook { left: 80px; background-position: 0 0; }
+.txst-meetus .twitter { left: 99px; background-position: -17px 0; }
+.txst-meetus .youtube { left: 118px; background-position: -34px 0; }
+.txst-meetus .wordpress { left: 137px; background-position: -51px 0; }
+.txst-meetus .flickr { left: 156px; background-position: -68px 0; }
+
+.txst-footer {
+	position: relative;
+	margin-top: -3px;
+	font-size: 10px;
+	color: #AAAAAA;
+	text-align: center;
+}
+.txst-footer a {
+	text-decoration: none;
+	color: #AAAAAA;
+}
+.txst-footer a:hover {
+	text-decoration: underline;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/khan-marketing-module.css */
+
+#txst-mainsite-marketingtabs {
+	visibility: hidden;
+	position: relative;
+	height: 342px;
+}
+#txst-mainsite-marketingtabs a:hover {
+	text-decoration: underline;
+}
+
+.txst-marketing-header {
+	cursor: pointer;
+	width: 225px;
+	height: 118px;
+	margin: 0px;
+	position: absolute;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+.txst-marketing-header a {
+	position: relative;
+	display: block;
+	height: 118px;
+	width: 225px;
+	padding-left: 2px;
+}
+
+/* contains the "selected" tab as a background */
+.txst-marketing-header .bg-span {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	height: 118px;
+	width: 223px;
+}
+
+.txst-marketing-header .bg-span span {
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: -2px;
+	height: 118px;
+	width: 225px;
+	background: url(txstate-home/../images/tab-active-shadow.png) no-repeat;
+}
+
+/* when clicked, the h3 gains this active-tab class */
+.active-tab {
+	z-index: 2;
+}
+
+#txst-mainsite-marketingtabs h3.active-tab .bg-span {
+	display: block;
+}
+#txst-mainsite-marketingtabs h3.active-tab .bg-span span {
+	visibility: visible;
+}
+
+/* class for positioning all the different main content areas */
+.txst-mainsite-marketing-content {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+	height: 230px;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.marketing-bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 230px;
+	z-index: -1;
+}
+
+.marketing-bottom-shadow {
+	position: absolute;
+	left: 0px;
+	bottom: 1px;
+	width: 904px;
+	height: 5px;
+	background: url(txstate-home/../images/marketing-bottom-shadow.png) no-repeat;
+	overflow: hidden;
+}
+
+.txst-videolink {
+	position: relative;
+	display: block;
+	width: 384px;
+	height: 216px;
+}
+
+.scrollarrow {
+	overflow: hidden;
+}
+.scrollarrow span {
+	display: block;
+	width: 551px;
+	height: 23px;
+	background: url(txstate-home/../images/scroll_sprites.png) no-repeat;
+}
+
+.marketing-es-content {
+	display: none;
+}
+
+/*   EXPLORE TAB   */
+#txst-marketing-explore {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
+#txst-marketing-explore .bg-span {
+	background: url(../images/x.gif) no-repeat;
+}
+
+/*  EXPLORE CONTENT AREA   */
+#explore-content-bg {
+	background: url(../images/x.gif) no-repeat;
+}
+
+#explore-content-news {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 192px;
+	height: 180px;
+	color: white;
+	padding-left: 20px;
+	padding-bottom: 44px;
+	z-index: 3;
+}
+
+#explore-content-news-bg {
+	background: url(txstate-home/../images/marketing-news-panel.png) no-repeat;
+	width: 212px;
+	height: 224px;
+}
+
+#explore-content-news h4 {
+	font-size: 14px;
+	margin: 0px;
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+
+.explore-content-newsitem {
+	overflow: hidden;
+}
+
+#explore-content-news-items {
+	position: relative;
+	height: 144px;
+	overflow: hidden;
+}
+
+.explore-content-newsitem a {
+	display: block;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 12px;
+	color: white;
+	height: 24px;
+	padding: 6px 6px 6px 0px;
+}
+
+#explore-content-news-buttons {
+	position: absolute;
+	left: 15px;
+	bottom: 0px;
+	width: 197px;
+	height: 37px;
+}
+#explore-content-news-buttons img {
+	display: block;
+}
+
+#explore-content-news-down {
+	position: relative;
+	display: block;
+	float: left;
+	width: 33px;
+	height: 23px;
+	cursor: pointer;
+}
+#explore-content-news-down span {
+	margin-left: -34px;
+}
+#explore-content-news-down.disabled-link span {
+	margin-left: 0px;
+}
+#explore-content-news-up {
+	position: relative;
+	display: block;
+	float: left;
+	width: 34px;
+	height: 23px;
+	cursor: pointer;
+}
+#explore-content-news-up span {
+	margin-left: -103px;
+}
+#explore-content-news-up.disabled-link span {
+	margin-left: -68px;
+}
+#explore-content-news-more {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: 2px;
+	text-align: right;
+	color: white;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.disabled-link {
+	cursor: default !important;
+}
+
+/*   RISING STARS TAB   */
+#txst-marketing-risingstars {
+	left: 227px;
+}
+
+#txst-marketing-risingstars .bg-span {
+	background: url(txstate-home/../images/tabs-risingstars-active.png) no-repeat;
+}
+
+/* RISING STARS CONTENT */
+
+#rising-stars-bg {
+	background: url(txstate-home/../images/marketing-main-risingstars.png) no-repeat;
+}
+
+.txst-mainsite-rising-stars-item {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding-left: 399px;
+	padding-right: 85px;
+	width: 418px;
+	height: 220px;
+	overflow: hidden;
+	color: #511a19;
+	font-size: 12px;
+}
+.txst-mainsite-rising-stars-item h4 {
+	margin: 0px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+}
+.txst-mainsite-rising-stars-videoframe {
+	position: absolute;
+	left: 2px;
+	top: 0px;
+	height: 216px;
+	width: 384px;
+}
+.txst-mainsite-rising-stars-desc {
+	height: 160px;
+	overflow: hidden;
+	line-height: 15px;
+	padding-left: 10px;
+}
+
+#rising-stars-thumbs {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 2;
+}
+
+.txst-mainsite-rising-stars-thumb {
+	position: relative;
+	width: 72px;
+	background: white url(txstate-home/../images/rising-stars-shadow-noalpha.png) no-repeat 62px 0px;
+}
+
+.txst-mainsite-rising-stars-thumb a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 75px;
+}
+.txst-mainsite-rising-stars-thumb img {
+	display: inline;
+	margin: 0px;
+	width: 72px;
+	height: 75px;
+}
+.txst-mainsite-rising-stars-thumb a.inactive {
+	width: 62px;
+	background-color: black;
+	height: 60px;
+}
+.txst-mainsite-rising-stars-thumb a.inactive img {
+	margin-top: -2px;
+	width: 62px;
+	height: 64px;
+}
+
+#rising-stars-controls {
+	position: absolute;
+	right: 6px;
+	bottom: 9px;
+	font-size: 10px;
+}
+
+#rising-stars-controls a {
+	color: #511a19;
+	text-decoration: none;
+}
+#rising-stars-controls img {
+	display: block;
+}
+#rising-stars-archive { display: none; }
+
+#rising-stars-up {
+	position: relative;
+	display: block;
+	float: left;
+	width: 34px;
+	height: 23px;
+	cursor: pointer;
+}
+#rising-stars-up span {
+	margin-left: -379px;
+}
+#rising-stars-up.disabled-link span {
+	margin-left: -344px;
+}
+#rising-stars-down {
+	position: relative;
+	display: block;
+	float: left;
+	width: 33px;
+	height: 23px;
+	cursor: pointer;
+}
+#rising-stars-down span {
+	margin-left: -310px;
+}
+#rising-stars-down.disabled-link span {
+	margin-left: -276px;
+}
+.txst-mainsite-rising-stars-readfull {
+	position: absolute;
+	bottom: 5px;
+	left: 409px;
+	width: 200px;
+}
+.txst-mainsite-rising-stars-readfull a {
+	color: #511a19;
+	text-decoration: none;
+}
+#rising-stars-content .lang-toggle {
+	position: absolute;
+	bottom: 5px;
+	right: 80px;
+	width: 100px;
+}
+#rising-stars-content .lang-toggle a {
+	color: #511a19;
+	text-decoration: none;
+}
+
+/*   BE A BOBCAT TAB   */
+#txst-marketing-beabobcat {
+	left: 453px;
+}
+
+#txst-marketing-beabobcat .bg-span {
+	background: url(txstate-home/../images/tabs-beabobcat-active.png) no-repeat;
+}
+
+/* BE A BOBCAT CONTENT */
+#be-a-bobcat-bg {
+	background: url(txstate-home/../images/marketing-main-beabobcat.png) no-repeat;
+}
+
+#bobcat-apply {
+	position: absolute;
+	left: 97px;
+	bottom: 10px;
+	width: 380px;
+	height: 70px;
+}
+
+#bobcat-apply h4 {
+	color: white;
+	font-size: 18px;
+	padding: 0px;
+	margin: 5px 0px;
+	font-weight: bold;
+	font-family: tahoma, verdana, arial;
+}
+
+#bobcat-apply .bobcats-meetus {
+	display: none;
+	color: white;
+	font-size: 12px;
+	padding: 4px 0px;
+}
+
+#bobcat-apply .bobcats-meetus img {
+	margin-bottom: -5px;
+	margin-right: 3px;
+	width: 16px;
+	height: 16px;
+}
+
+#bobcat-apply ul {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 225px;
+}
+
+#bobcat-apply ul a {
+	display: block;
+	width: 49%;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	background: url(txstate-home/../images/apply-right-arrow.png) no-repeat;
+	padding-left: 15px;
+}
+
+#bobcat-apply li {
+	float: left;
+	width: 49%;
+	padding: 6px 0px;
+	list-style: none;
+}
+
+.txst-mainsite-bobcats-item {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding-left: 97px;
+	padding-right: 399px;
+	width: 406px;
+	height: 220px;
+	overflow: hidden;
+	color: white;
+	font-size: 12px;
+}
+.txst-mainsite-bobcats-item h4 {
+	margin: 0px;
+	padding: 12px 0px;
+	color: white;
+	font-size: 16px;
+}
+
+.bobcats-description {
+	height: 95px;
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.txst-mainsite-bobcats-videoframe {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 216px;
+	width: 384px;
+}
+
+#bobcat-thumbs {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+}
+
+.txst-mainsite-bobcats-thumb {
+	position: relative;
+	width: 72px;
+	background: white url(txstate-home/../images/bobcats-shadow-noalpha.png) no-repeat 8px 0px;
+}
+
+.txst-mainsite-bobcats-thumb a {
+	position: relative;
+	display: block;
+	margin-left: 0px;
+	overflow: hidden;
+	width: 72px;
+	height: 75px;
+}
+.txst-mainsite-bobcats-thumb img {
+	display: inline;
+	margin: 0px;
+	width: 72px;
+	height: 75px;
+}
+.txst-mainsite-bobcats-thumb a.inactive {
+	width: 62px;
+	background-color: black;
+	height: 60px;
+	margin-left: 10px;
+}
+.txst-mainsite-bobcats-thumb a.inactive img {
+	margin-top: -2px;
+	width: 62px;
+	height: 64px;
+}
+
+#bobcat-controls {
+	position: absolute;
+	left: 6px;
+	bottom: 9px;
+	font-size: 10px;
+}
+
+#bobcat-controls a {
+	color: white;
+	text-decoration: none;
+}
+#bobcat-controls img {
+	display: block;
+}
+#bobcats-archive { display: none; }
+#bobcats-up {
+	position: relative;
+	display: block;
+	float: left;
+	width: 34px;
+	height: 23px;
+	cursor: pointer;
+}
+#bobcats-up span {
+	margin-left: -103px;
+}
+#bobcats-up.disabled-link span {
+	margin-left: -68px;
+}
+#bobcats-down {
+	position: relative;
+	display: block;
+	float: left;
+	width: 33px;
+	height: 23px;
+	cursor: pointer;
+}
+#bobcats-down span {
+	margin-left: -34px;
+}
+#bobcats-down.disabled-link span {
+	margin-left: 0px;
+}
+.txst-mainsite-bobcats-readfull {
+	position: absolute;
+	right: 390px;
+	bottom: 78px;
+	width: 75px;
+}
+.txst-mainsite-bobcats-readfull a {
+	color: white;
+	text-decoration: none;
+}
+
+#be-a-bobcat-content .lang-toggle {
+	position: absolute;
+	bottom: 78px;
+	left: 97px;
+	width: 100px;
+}
+#be-a-bobcat-content .lang-toggle a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*   BOBCAT TUBE TAB   */
+#txst-marketing-bobcattube {
+	left: 679px;
+}
+
+#txst-marketing-bobcattube .bg-span {
+	background: url(txstate-home/../images/tabs-bobcattube-active.png) no-repeat;
+}
+
+/*   BOBCAT TUBE CONTENT   */
+
+#bobcat-tube-content {
+	padding-left: 399px;
+	width: 505px;
+}
+
+#bobcat-tube-bg {
+	width: 904px;
+	background: url(txstate-home/../images/marketing-main-bobcattube.png) no-repeat;
+}
+
+.bobcat-tube-header {
+	position: relative;
+	font-size: 16px;
+	margin: 13px 0px 15px 0px;
+	padding-left: 8px;
+	color: white;
+}
+
+.txst-mainsite-videos-thumb {
+	position: relative;
+	width: 232px;
+	height: 45px;
+	padding: 5px;
+}
+
+.txst-mainsite-videos-thumb a {
+	position: relative;
+	display: block;
+	height: 45px;
+	font-weight: bold;
+	font-size: 11px;
+	text-decoration: none;
+	color: white;
+}
+
+.txst-mainsite-videos-thumb a div {
+	width: 182px;
+	height: 43px;
+	padding-left: 5px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.txst-mainsite-videos-thumb a img {
+	float: left;
+	vertical-align: middle;
+	width: 45px;
+	height: 45px;
+}
+
+#videos-thumbs {
+	position: relative;
+	overflow: hidden;
+	height: 168px;
+	width: 490px;
+}
+
+.videos-thumbs-column {
+	width: 242px;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 200px;
+}
+
+.txst-mainsite-videos-item {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 2px;
+}
+
+#videos-controls {
+	position: absolute;
+	top: 14px;
+	right: 12px;
+	z-index: 5;
+}
+
+#videos-controls a img {
+	display: block;
+}
+
+#videos-left {
+	position: relative;
+	display: block;
+	float: right;
+	width: 33px;
+	height: 23px;
+	cursor: pointer;
+}
+#videos-left span {
+	margin-left: -448px;
+}
+#videos-left.disabled-link span {
+	margin-left: -414px;
+}
+#videos-right {
+	position: relative;
+	display: block;
+	float: right;
+	width: 34px;
+	height: 23px;
+	cursor: pointer;
+}
+#videos-right span {
+	margin-left: -517px;
+}
+#videos-right.disabled-link span {
+	margin-left: -482px;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/khan-usefullinks.css */
+
+.txst-mainsite-usefullinks {
+	position: relative;
+	padding-top: 15px;
+	padding-left: 13px;
+	overflow: hidden;
+}
+.txst-mainsite-usefullinks-column {
+	position: relative;
+	float: left;
+	width: 174px;
+	padding-right: 4px;
+}
+.txst-mainsite-usefullinks-column h3 {
+	color: #501214;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0em 0em .3em 0em;
+	height: 1.5em;
+}
+.txst-mainsite-usefullinks-column h3 a {
+	color: #501214;
+	text-decoration: none;
+	padding: .2em;
+	margin-left: -.2em;
+	white-space: nowrap;
+	line-height: 1em;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+
+}
+.txst-mainsite-usefullinks-linkitem a {
+	display: block;
+	font-size: .75em;
+	text-decoration: none;
+	color: #6d6d6d;
+}
+.txst-mainsite-usefullinks-column h3 a:hover {
+	background-color: #DDDDDD;
+	text-decoration: none;
+}
+.txst-mainsite-usefullinks-column a:hover {
+	text-decoration: underline;
+}
+
+.txst-mainsite-usefullinks-linkitem {
+	position: relative;
+	line-height: 1.2em;
+}
+
+.txst-mainsite-usefullinks-expander {
+	position: relative;
+	clear: both;
+	margin-top: 5px;
+	height: 10px;
+}
+.txst-mainsite-usefullinks-expander a {
+	float: right;
+	display: block;
+	width: auto;
+	padding-right: 15px;
+	color: #6b877d;
+	text-decoration: none;
+	font-size: 11px;
+}
+.txst-mainsite-usefullinks-expander a:hover {
+	text-decoration: underline;
+}
+
+#expander-arrow {
+	position: absolute;
+	top: 2px;
+	right: 0px;
+	width: 11px;
+	height: 9px;
+	z-index: 1;
+}
+
+.txst-mainsite-usefullinks-expander .expand {
+	background: url(txstate-home/../images/expander-down.gif) no-repeat;
+}
+.txst-mainsite-usefullinks-expander .collapse {
+	background: url(txstate-home/../images/expander-up.gif) no-repeat;
+}
+
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/khan-specialevents.css */
+
+.txst-mainsite-specialevents {
+	position: absolute;
+	left: 0px;
+	top: 15px;
+	width: 665px;
+	height: 168px;
+	background: url(txstate-home/../images/special-events-bg-noalpha.png) no-repeat;
+	padding: 10px 15px 18px 13px;
+	overflow: hidden;
+}
+.txst-mainsite-specialevents h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #5b2e33;
+	margin: 0;
+	padding: 2px;
+}
+
+#txst-events-extralinks {
+	position: absolute;
+	right: 10px;
+	bottom: 12px;
+	z-index: 1;
+	color: #777777;
+}
+
+#txst-events-extralinks a {
+	text-decoration: none;
+	color: #777777;
+	font-size: 11px;
+}
+
+#txst-events-extralinks a:hover {
+	text-decoration: underline;
+}
+
+.txst-eventsbox-content {
+	position: relative;
+	overflow: hidden;
+	width: 660px;
+}
+
+.txst-eventsbox-entry {
+	position: relative;
+	float: left;
+	width: 330px;
+	height: 110px;
+	margin-top: 25px;
+	margin-bottom: 70px;
+	overflow: hidden;
+}
+
+.txst-eventsbox-headline {
+	display: block;
+	color: #5b2e33;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 15px;
+	white-space: nowrap;
+}
+.txst-eventsbox-headline .summary {
+	font-size: 12px;
+}
+.txst-eventsbox-headline abbr {
+	border: 0px;
+}
+
+a.txst-eventsbox-image {
+	float: left;
+	margin-right: 10px;
+}
+.txst-eventsbox-image img {
+	width: 64px;
+	height: 64px;
+}
+
+.txst-eventsbox-tease {
+	padding-top: 5px;
+	padding-right: 5px;
+	font-size: 10px;
+	line-height: 12px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.khan-eventsbox-addcalendar {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 70px;
+	color: #5b2e33;
+	font-size: 9px;
+	text-decoration: none;
+	width: 50px;
+	padding-left: 20px;
+	line-height: 12px;
+	background: url(../images/calendar.gif) no-repeat;
+}
+
+a.khan-eventsbox-addcalendar:hover {
+	text-decoration: underline;
+}
+
+#txst-events-controls {
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	text-align: right;
+	z-index: 1;
+}
+
+#txst-events-controls img {
+	display: block;
+}
+
+.txst-events-morelink {
+	display: block;
+	color: #5b2e33;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: bold;
+	height: 14px;
+	white-space: nowrap;
+}
+
+#txst-events-left {
+	position: absolute;
+	right: 34px;
+	top: 16px;
+	display: block;
+	width: 33px;
+	height: 23px;
+	cursor: pointer;
+}
+#txst-events-left span {
+	margin-left: -172px;
+}
+#txst-events-left.disabled-link span {
+	margin-left: -138px;
+}
+#txst-events-right {
+	position: absolute;
+	right: 0px;
+	top: 16px;
+	display: block;
+	width: 34px;
+	height: 23px;
+	cursor: pointer;
+}
+#txst-events-right span {
+	margin-left: -241px;
+}
+#txst-events-right.disabled-link span {
+	margin-left: -206px;
+}
+
+/* IMPORTED FROM FILE: /opt/magnolia/webapps/magnoliaAssets/txstate-home/css/khan-helpfullinks.css */
+
+.txst-mainsite-helpfullinks {
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	width: 190px;
+	z-index: 1;
+	height: 183px;
+	overflow: visible;
+	padding: 4px 10px 8px 12px;
+	background: url(txstate-home/../images/helpful-links-bg-noalpha.png) no-repeat;
+}
+
+.txst-mainsite-helpfullinks h2 {
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5b2e33;
+	margin: 0;
+	line-height: 16px;
+	height: 19px;
+	padding: 5px 0px 5px 0px;
+}
+.txst-mainsite-helpfullinks h2 span {
+	position: relative;
+	display: inline;
+	padding-right: 28px;
+	padding-top: 2px;
+	float: left;
+}
+.txst-mainsite-helpfullinks h2 span span {
+	position: absolute;
+	display: block;
+	right: 0px;
+	top: 0px;
+	width: 19px;
+	height: 19px;
+	padding: 0px;
+}
+.txst-mainsite-helpfullinks-linkitem {
+	clear: both;
+}
+.txst-mainsite-helpfullinks-linkitem a {
+	display: block;
+	padding: 2px;
+	color: #5b2e33;
+	text-decoration: none;
+	font-size: 11px;
+}
+.txst-mainsite-helpfullinks-linkitem a:hover {
+	text-decoration: underline;
+}
+

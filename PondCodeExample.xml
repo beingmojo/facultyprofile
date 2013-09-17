@@ -1,0 +1,178 @@
+<node name="Technologies">
+	<node name="NanoTechnology">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="New research developments in nanotechnology at UTA are supported to commercialization by the ATI which is a formal partnership between UTA and the Arlington Chamber of Commerce. " url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+	<node name="Advanced Energy Technologies">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+	<node name="BioTechnology">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+	<node name="MEMS TEchnologies">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+	<node name="Nanotechnologies">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+	<node name="Semiconductor Technologies">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+	
+
+	<node name="Software Technologies / Wireless">
+		<node name="Advanced Manufacturing">
+			<node name="Nanotechnology and Materials" desc="NanoFab" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Nano+technology" />
+			<node name="MEMS Manufacturing" desc="Micro Elecronics" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+MEMS" />
+			<node name="Automotive Manufacturing" desc="Auto Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Automotive" />
+			<node name="Semiconductor Manufacturing" desc="Semiconductor Revolution" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Semiconductor" />
+		</node>
+		<node name="Aerospace and Defence">
+			<node name="Composite Advanced Materials" desc="Meta theory" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Composite+Advanced+Materials" />
+		</node>
+		<node name="Biotechnology and Life Sciences / Energy">
+			<node name="Oil and Gas Production" desc="Energy to succeed" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Oil+Gas" />
+			<node name="Power Generation and Transportation" desc="makes our world a smaller place" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Power+Generation+Transportation" />
+			<node name="Manufacturing Energy Systems" desc="Energy no man has dreamt of" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Energy+Systems" />
+		</node>
+		<node name="Information and Computer Technology">
+			<node name="Communication Equipment" desc="shrinks the world" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Communication" />
+			<node name="Computing Equipment" desc="Higher speeds" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology+Computing" />
+			<node name="Information Technology" desc="The technology to communicate" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+Information+Computer+Technology" />
+		</node>
+		<node name="Petroleum Refining and Chemical Products">
+			<node name="Oil Production" desc="Petrochemicals" url="searchresults.php?searchtype=basic&faculty=true&researchcenter=true&technology=true&facility=true&search=+oil+Petroleum+Chemical" />
+		</node>
+	</node>
+</node>

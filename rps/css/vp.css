@@ -1,0 +1,76 @@
+table#content {width: 100%; background: white;}
+table#content hr {height: 1px; color: #666; width: 2px; margin: 10px 0px;}
+table#content p {font-size: 11px; margin-left: 10px; margin-right: 10px;}
+table#content td.sides {width: 20%; padding: 0; border:0;}
+table#content td.side1 {width: 25%; padding-right: 5px; border:0; }
+table#content td.side2 {width: 25%; padding: 0; border:0;}
+table#content td.middle {width: 50%; padding: 0 15px 0 0; margin-right:5px; border:0;}
+table#content td.divider {width: 2%; padding: 0; border:0; }
+table#content td.line {width: 2%; border-left: 1px solid #666;}
+table#content td.heading {
+	background: #999;
+	color: white;
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px 0px;
+	text-align:center;
+	letter-spacing: 0.3em;
+}
+table#content div.heading2 {background: #fff; color: #093576; font-weight: bold; font-size: 11px; font-family: Georgia, "Times New Roman", Times, serif; padding: 5px 0px;}
+table#content div.heading3 {background: #fff; color: #093576; font-weight: bold; font-size: 13px; font-family: Georgia, "Times New Roman", Times, serif; padding: 5px 0px; text-align: left; margin-top: 5px; margin-bottom: 5px;}
+table#page {width: 660px; padding: 0; border:0;}
+
+.infolinks a:link, #infolinks a:visited {color: #093576; font-weight: bold; text-decoration: none; font-size: 11px; }
+.infolinks a:hover {text-decoration: underline;}
+.infolinks div {padding: 2px 2px 10px 30px;; text-align: left ;}
+
+#infolinks a:link, #infolinks a:visited {color: #093576; font-weight: bold; text-decoration: none; font-size: 11px; }
+#infolinks a:hover {text-decoration: underline;}
+#infolinks div {padding: 2px 2px 10px 30px;; text-align: left ;}
+ 
+#mainlinks a:link, #mainlinks a:visited {color: black; font-weight: bold; text-decoration: none; font-size: 12px; }
+#mainlinks div {padding: 4px 10px; text-align: left;}
+#mainlinks a:hover {text-decoration: underline;}
+#newslinks a:link, #newslinks a:visited, #researchnews a:link, #researchnews a:visited {color: black; text-decoration: none; font-size: 11px; }
+#newslinks a:hover {text-decoration: underline;}
+#newslinks div, #researchnews div {padding: 4px 10px; text-align: left;}
+#researchnews span.title {font-weight: bold; color: #093576;}
+#researchnews a:hover {background-color: #eaeaea;}.rsp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #093576;
+	letter-spacing: 0.085em;
+}
+.searchbox1
+	 {
+	color: #666;
+	font-size: 9px;
+	background-color: #FFFFFF;
+	border: 1px solid #dbdbdb;
+	height: 13px;
+	
+	position: relative;
+	padding: 0 0 5px 10px;
+		}
+.arrow1
+	 {
+	color: #666;
+	font-size: 9px;
+	border: 0px #FFFFFF;
+	position: relative;
+	padding: 0 0 0 1px;
+	
+	
+	
+		
+		}
+.centertext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: justify;
+}

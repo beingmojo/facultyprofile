@@ -1,0 +1,230 @@
+#menu {
+width:100%;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+margin-left:50px;
+z-index:100%;
+}
+
+#menu ul {
+  padding: 0;
+  margin: 0;
+  margin-right:0;
+  list-style: none;
+  width:465px;
+  float:right;
+  }
+
+#menu ul li {
+  float: left;
+  position: relative;
+  width:100px;
+  padding-top:2px;
+  padding-bottom:2px;
+  padding-left:2px;
+  padding-right:0px;
+  text-align:left;
+}
+
+#menu ul li ul {
+  display: none;
+  position: absolute; 
+  top: 18px;
+  width:100px;
+  left:0;
+  background-color:#D7CFCD;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #888 #555 #bbb;
+  text-align:left;
+ }
+
+#menu ul li ul li{
+	position:relative;
+	background-color:#D7CFCD;
+	border: 1px ridge #CCCCCC;
+  }
+
+#menu li > ul {
+	top: auto;
+	left: auto;
+	}
+
+#menu li:hover ul, #menu  li.over ul{ display: block;}
+
+#menu a {text-decoration:none; color:#444444;}
+
+#menu a:hover { color: #ffffff; /*font-weight:bold;*/}
+
+/*side navigation*/
+
+#sidenav { 
+width: 100%;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+margin-top:0;
+}
+
+#sidenav ul
+{
+margin-left: 0;
+padding-left: 0;
+margin-top:0;
+list-style-type: none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+#sidenav a
+{
+display: block;
+padding: 3px;
+width: 160px;
+/*background-color: #093576; */
+background-color: #CDAF95;
+color:#000000;
+border-bottom: 2px solid #C1D2E6;
+}
+
+#sidenav a:link
+{
+/*color: #FFFFFF;*/
+color: #000000;
+text-decoration: none;
+}
+
+#sidenavlist a:visited
+{
+/*	color:#CCCCCC;*/
+	color:#555555;
+	text-decoration:none;
+}
+
+#sidenav a:hover
+{
+background-color: #D7CFCD;
+color: #000000;
+}
+
+#sidenav #sideactive 
+{ 
+	background-color: #C1D2E6; 
+	color:black; 
+	display: block;
+	padding: 3px;
+	width: 160px;
+	border-bottom: 2px solid #D7CFCD;	
+}
+
+/*top view navigation */
+ #navcontainer ul
+{
+text-align: center;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+/* cancels gap caused by top padding in Opera 7.54 */
+margin-left: 0;
+/*background-color: #093576;*/
+background-color: #CDAF95;
+width: 100%;
+font-family: Arial,Helvetica,sans-serif;
+font-size:12px;
+line-height: 8px;
+/* fixes Firefox 0.9.3 */
+border-top: 3px solid #D7CFCD;
+
+}
+
+#navcontainer ul li
+{
+display: inline;
+padding-left: 3px;
+padding-right: 3px;
+padding-bottom: 1px;
+/* matches link padding except for left and right */
+padding-top: 5px;
+color:#FFFFFF;
+}
+
+#navcontainer ul li a
+{
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 1px;
+padding-top: 5px;
+color: white;
+text-decoration: none;
+}
+
+#navcontainer ul li a:hover
+{
+background-color: #369;
+color: white;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 1px;
+padding-top: 1px;
+text-decoration:none;
+}
+
+#navcontainer #active, #navcontainer #active a:hover
+{ 
+	background-color: #C1D2E6;
+	color: #000000;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	text-decoration: none;
+}
+
+/*
+dl, dt, dd, ul, li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+*/
+
+#menudept {
+position: relative; /* Menu position that can be changed at will */
+top: 0;
+left: 0;
+}
+#menudept {
+width: 100%;
+}
+#menudept dt {
+cursor: pointer;
+/*margin: 2px 0;
+height: 20px;
+line-height: 20px;*/
+font-size: 12px;
+text-align: left;
+font-weight: bold;
+border-bottom: 1px solid #D7CFCD;	
+background: #8DB0D3;
+font-family:Arial, Helvetica, sans-serif;
+}
+#menudept dd {
+border-bottom: 1px solid gray;
+}
+#menudept li {
+text-align: left;
+background: #fff;
+font-size:11px;
+font-family:Arial, Helvetica, sans-serif;
+}
+#menudept li a, #menudept dt a {
+color: #000;
+text-decoration: none;
+display: block;
+border: 0 none;
+height: 100%;
+}
+#menudept li a:hover, #menudept dt a:hover {
+background: #D7CFCD;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--TUTORIAL LINK:
+    http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
+-->
+<html>
+    <head>
+        <title>rps.test: File DB Upload</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <!--
+            Using PHP to upload files into MySQL database sometimes needed by
+            some web application. For instance for storing pdf documents or
+            images to make some kind of online briefcase (like Yahoo briefcase).
+            For the first step, let's make the table for the upload files.
+            The table will consist of.
+            * 1. id : Unique id for each file
+            * 2. name : File name
+            * 3. type : File content type
+            * 4. size : File size
+            * 5. content : The file itself
+
+            For column content we'll use BLOB data type. BLOB is a binary large
+            object that can hold a variable amount of data. MySQL have four BLOB
+            data types, they are :
+            * TINYBLOB
+            * BLOB
+            * MEDIUMBLOB
+            * LONGBLOB
+            Since BLOB is limited to store up to 64 kilobytes of data we will
+            use MEDIUMBLOB so we can store larger files ( up to 16 megabytes ).
+
+            * CREATE TABLE upload (
+            *      id INT NOT NULL AUTO_INCREMENT,
+            *      name VARCHAR(30) NOT NULL,
+            *      type VARCHAR(30) NOT NULL,
+            *      size INT NOT NULL,
+            *      content MEDIUMBLOB NOT NULL,
+            *      PRIMARY KEY(id)
+            * );
+
+            Uploading a file to MySQL is a two step process. First you need to
+            upload the file to the server then read the file and insert it to
+            MySQL. For uploading a file we need a form for the user to enter the
+            file name or browse their computer and select a file. The input
+            type="file" is used for that purpose. After the form is submitted
+            then we need to read the autoglobal $_FILES. In the example above
+            the input name for the file is userfile so the content of $_FILES
+            are like this :
+            * $_FILES['userfile']['name'] -- The original name of the file on
+              the client machine.
+            * $_FILES['userfile']['type'] -- The mime type of the file, if the
+              browser provided this information. An example would be "image/gif"
+            * $_FILES['userfile']['size'] -- The size, in bytes, of the uploaded
+              file.
+            * $_FILES['userfile']['tmp_name'] -- The temporary filename of the
+              file in which the uploaded file was stored on the server.
+            * $_FILES['userfile']['error'] -- The error code associated with
+              this file upload. ['error'] was added in PHP 4.2.0
+            Example : file_db_upload.php
+        -->
+        <form action="file_db_upload.php" method="post" enctype="multipart/form-data">
+            <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+                <tr>
+                    <td width="246">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                        <input name="userfile" type="file" id="userfile">
+                    </td>
+                    <td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

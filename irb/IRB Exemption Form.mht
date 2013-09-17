@@ -1,0 +1,967 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: IRB Exemption Form
+Date: Fri, 3 Aug 2007 15:53:43 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C7D5E6.7818E400"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3138
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C7D5E6.7818E400
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.txstate.edu/research/irb/irb_exemption_form.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>IRB Exemption =
+Form</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<SCRIPT type=3Dtext/JavaScript>
+<!--
+function stopRKey(evt) {
+	var evt  =3D (evt) ? evt : ((event) ? event : null);
+	var node =3D (evt.target) ? evt.target : ((evt.srcElement) ? =
+evt.srcElement : null);
+	if ((evt.keyCode =3D=3D 13) && (node.type=3D=3D"text")) { return false; =
+}
+}
+document.onkeypress =3D stopRKey;
+
+function checkInputSize(which, maxsize) {
+        which.value =3D which.value.substring(0, maxsize);
+    }
+
+function =
+FDK_AddToValidateArray(FormName,FormElement,Validation,SetFocus)
+{
+    var TheRoot=3Deval("document."+FormName);
+=20
+    if (!TheRoot.ValidateForm)=20
+    {
+        TheRoot.ValidateForm =3D true;
+        eval(FormName+"NameArray =3D new Array()")
+        eval(FormName+"ValidationArray =3D new Array()")
+        eval(FormName+"FocusArray =3D new Array()")
+    }
+    var ArrayIndex =3D eval(FormName+"NameArray.length");
+    eval(FormName+"NameArray[ArrayIndex] =3D FormElement");
+    eval(FormName+"ValidationArray[ArrayIndex] =3D Validation");
+    eval(FormName+"FocusArray[ArrayIndex] =3D SetFocus");
+=20
+}
+
+function FDK_ValidateRadio(RadioGroup,ErrorMsg)
+{
+	var msg =3D ErrorMsg;
+
+    for (x=3D0;x<RadioGroup.length;x++)  {
+		if (RadioGroup[x].checked)  {
+			msg=3D""
+		}=20
+	}
+	return msg;
+}
+
+function =
+FDK_AddRadioValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString =3D =
+"FDK_ValidateRadio("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName + =
+'[0]'),ValString,SetFocus)
+}
+
+function FDK_ValidateSelectionMade(FormElement,ErrorMsg)
+{
+  msg =3D "";
+
+  var iPos =3D FormElement.selectedIndex;
+  if ((iPos<=3D0 && FormElement.size<=3D1) || (iPos<0))
+  {
+    msg =3D ErrorMsg;
+  }
+
+  return msg;
+}
+
+function =
+FDK_AddSelectionMadeValidation(FormName,FormElementName,SetFocus,ErrorMsg=
+)  {
+  var ValString =3D =
+"FDK_ValidateSelectionMade("+FormElementName+","+ErrorMsg+")"
+  =
+FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)=
+
+}
+
+function FDK_Validate(FormName, stopOnFailure, AutoSubmit, ErrorHeader)
+{
+ var theFormName =3D FormName;
+ var theElementName =3D "";
+ if (theFormName.indexOf(".")>=3D0) =20
+ {
+   theElementName =3D theFormName.substring(theFormName.indexOf(".")+1)
+   theFormName =3D theFormName.substring(0,theFormName.indexOf("."))
+ }
+ var ValidationCheck =3D eval("document."+theFormName+".ValidateForm")
+ if (ValidationCheck) =20
+ {
+  var theNameArray =3D eval(theFormName+"NameArray")
+  var theValidationArray =3D eval(theFormName+"ValidationArray")
+  var theFocusArray =3D eval(theFormName+"FocusArray")
+  var ErrorMsg =3D "";
+  var FocusSet =3D false;
+  var i
+  var msg
+   =20
+=20
+        // Go through the Validate Array that may or may not exist
+        // and call the Validate function for all elements that have =
+one.
+  if (String(theNameArray)!=3D"undefined")
+  {
+   for (i =3D 0; i < theNameArray.length; i ++)
+   {
+    msg=3D"";
+    if (theNameArray[i].name =3D=3D theElementName || theElementName =
+=3D=3D "")
+    {
+      msg =3D eval(theValidationArray[i]);
+    }
+    if (msg !=3D "")
+    {
+     ErrorMsg +=3D "\n"+msg;                  =20
+     if (stopOnFailure =3D=3D "1")=20
+     {
+       if (theFocusArray[i] && !FocusSet) =20
+      {
+       FocusSet=3Dtrue;
+       theNameArray[i].focus();
+      }
+      alert(ErrorHeader+ErrorMsg);
+      document.MM_returnValue =3D false;=20
+      break;
+     }
+     else =20
+     {
+      if (theFocusArray[i] && !FocusSet) =20
+      {
+       FocusSet=3Dtrue;
+       theNameArray[i].focus();
+      }
+     }
+    }
+   }
+  }
+  if (ErrorMsg!=3D"" && stopOnFailure !=3D "1")=20
+  {
+   alert(ErrorHeader+ErrorMsg);
+  }
+  document.MM_returnValue =3D (ErrorMsg=3D=3D"");=20
+  if (document.MM_returnValue && AutoSubmit) =20
+  {
+   eval("document."+FormName+".submit()")
+  }
+ }
+}
+
+function FDK_StripChars(theFilter,theString)
+{
+	var strOut,i,curChar
+
+	strOut =3D ""
+	for (i=3D0;i < theString.length; i++)
+	{	=09
+		curChar =3D theString.charAt(i)
+		if (theFilter.indexOf(curChar) < 0)	// if it's not in the filter, send =
+it thru
+			strOut +=3D curChar	=09
+	}=09
+	return strOut
+}
+
+function FDK_ValidateNonBlank(FormElement,ErrorMsg)
+{
+  var msg =3D ErrorMsg;
+  var val =3D FormElement.value; =20
+
+  if (!(FDK_StripChars(" \n\t\r",val).length =3D=3D 0))
+  {
+     msg=3D"";
+  }
+
+  return msg;
+}
+
+function =
+FDK_AddNonBlankValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString =3D =
+"FDK_ValidateNonBlank("+FormElementName+","+ErrorMsg+")"
+  =
+FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)=
+
+}
+
+function FDK_AllInRange(x,y,theString)
+{
+	var i, curChar
+=09
+	for (i=3D0; i < theString.length; i++)
+	{
+		curChar =3D theString.charAt(i)
+		if (curChar < x || curChar > y) //the char is not in range
+			return false
+	}
+	return true
+}
+
+function FDK_reformat(s)
+{
+    var arg;
+    var sPos =3D 0;
+    var resultString =3D "";
+
+    for (var i =3D 1; i < FDK_reformat.arguments.length; i++) {
+       arg =3D FDK_reformat.arguments[i];
+       if (i % 2 =3D=3D 1)=20
+           resultString +=3D arg;
+       else=20
+       {
+           resultString +=3D s.substring(sPos, sPos + arg);
+           sPos +=3D arg;
+       }
+    }
+    return resultString;
+}
+
+function FDK_ValidateEmail(FormElement,Required,ErrorMsg)
+{
+   var msg =3D "";
+   var val =3D FormElement.value;
+   var msgInvalid =3D ErrorMsg;
+
+   var theLen =3D FDK_StripChars(" ",val).length
+   if (theLen =3D=3D 0)	     {
+     if (!Required) return "";
+     else return msgInvalid;
+   }
+
+   if (val.indexOf("@",0) < 0 || val.indexOf(".")<0)=20
+   {
+      msg =3D msgInvalid;
+   }
+   return msg;
+}
+
+function =
+FDK_AddEmailValidation(FormName,FormElementName,Required,SetFocus,ErrorMs=
+g)  {
+  var ValString =3D =
+"FDK_ValidateEmail("+FormElementName+","+Required+","+ErrorMsg+")"
+  =
+FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)=
+
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=3Ddocument; =
+if((p=3Dn.indexOf("?"))>0&&parent.frames.length) {
+    d=3Dparent.frames[n.substring(p+1)].document; n=3Dn.substring(0,p);}
+  if(!(x=3Dd[n])&&d.all) x=3Dd.all[n]; for =
+(i=3D0;!x&&i<d.forms.length;i++) x=3Dd.forms[i][n];
+  for(i=3D0;!x&&d.layers&&i<d.layers.length;i++) =
+x=3DMM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=3Dd.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var =
+i,p,q,nm,test,num,min,max,errors=3D'',args=3DMM_validateForm.arguments;
+  for (i=3D0; i<(args.length-2); i+=3D3) { test=3Dargs[i+2]; =
+val=3DMM_findObj(args[i]);
+    if (val) { nm=3Dval.name; if ((val=3Dval.value)!=3D"") {
+      if (test.indexOf('isEmail')!=3D-1) { p=3Dval.indexOf('@');
+        if (p<1 || p=3D=3D(val.length-1)) errors+=3D'- '+nm+' must =
+contain an e-mail address.\n';
+      } else if (test!=3D'R') { num =3D parseFloat(val);
+        if (isNaN(val)) errors+=3D'- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') !=3D -1) { p=3Dtest.indexOf(':');
+          min=3Dtest.substring(8,p); max=3Dtest.substring(p+1);
+          if (num<min || max<num) errors+=3D'- '+nm+' must contain a =
+number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) =3D=3D 'R') errors +=3D '- '+nm+' is =
+required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue =3D (errors =3D=3D '');
+}
+//-->
+</SCRIPT>
+<LINK href=3D"http://www.txstate.edu/research/css/forms.css" =
+type=3Dtext/css=20
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.16481" name=3DGENERATOR></HEAD>
+<BODY=20
+onload=3D"FDK_AddRadioValidation('irb_exemption_form','document.irb_exemp=
+tion_form.II_1_academic_project',true,'\'An answer to Section II, =
+Question 1 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_2_contribute_knowledge',true,'\'An answer to Section =
+II, Question 2 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_3_share_results',true,'\'An answer to Section II, =
+Question 3 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_4_interact_people',true,'\'An answer to Section II, =
+Question 4 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_5_collect_info',true,'\'An answer to Section II, =
+Question 5 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_6_involve_pregnant',true,'\'An answer to Section II, =
+Question 6 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_7_involve_prisoners',true,'\'An answer to Section II, =
+Question 7 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_8_involve_vulnerable',true,'\'An answer to Section II, =
+Question 8 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_9_medical_identifiers',true,'\'An answer to Section =
+II, Question 9 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_10_minor_subjects',true,'\'An answer to Section II, =
+Question 10 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_11_FDAproduct_used',true,'\'An answer to Section II, =
+Question 11 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_12_ingest_substance',true,'\'An answer to Section II, =
+Question 12 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_13_physical_tasks',true,'\'An answer to Section II, =
+Question 13 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_14_influence_behavior',true,'\'An answer to Section =
+II, Question 14 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_15_sensitive_discussion',true,'\'An answer to Section =
+II, Question 15 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_16_exposeto_discomfort',true,'\'An answer to Section =
+II, Question 16 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_17_subject_deception',true,'\'An answer to Section II, =
+Question 17 is required,\\nplease make a =
+selection.\'');FDK_AddRadioValidation('irb_exemption_form','document.irb_=
+exemption_form.II_18_taping_subjects',true,'\'An answer to Section II, =
+Question 18 is required,\\nplease make a =
+selection.\'');FDK_AddSelectionMadeValidation('irb_exemption_form','docum=
+ent.irb_exemption_form.SenderStatus',true,'\'An answer to Section I, =
+Question 1 is required,\\nplease make a =
+selection.\'');FDK_AddSelectionMadeValidation('irb_exemption_form','docum=
+ent.irb_exemption_form.sponsorship',true,'\'An answer to Section I, =
+Question 2 is required,\\nplease make a =
+selection.\'');FDK_AddSelectionMadeValidation('irb_exemption_form','docum=
+ent.irb_exemption_form.III_1_exempt_category',true,'\'An answer to =
+Section III, Question 1 is required,\\nplease make a =
+selection.\'');FDK_AddNonBlankValidation('irb_exemption_form','document.i=
+rb_exemption_form.SenderPhoneExt',true,'\'If you do not have a phone =
+extension, please answer N/A in the space provided for Section I, =
+Question 4 - =
+extension.\'');FDK_AddNonBlankValidation('irb_exemption_form','document.i=
+rb_exemption_form.FacultyName',true,'\'If you are not a student, please =
+enter N/A into the space provided for Section I, Question 4 - Faculty =
+Name.\'');FDK_AddEmailValidation('irb_exemption_form','document.irb_exemp=
+tion_form.SenderEmail',true,true,'\'Please enter a valid e-mail =
+address.\\n(a valid e-mail address has an \\\'@\\\' and a =
+\\\'.\\\')\'')">
+<H2>Application for IRB Exemption</H2>
+<P>&nbsp;</P>
+<FORM id=3Dirb_exemption_form name=3Dirb_exemption_form=20
+onsubmit=3D"FDK_Validate('irb_exemption_form',false,false,'The Form =
+Could Not Be =
+Submitted\n\n');MM_validateForm('SenderFirstName','','R','SenderName','',=
+'R','SenderPhone','','R','III_2_project_purpose','','R','III_3_category_p=
+ertains','','R','III_4_exempt_reason','','R');return =
+document.MM_returnValue"=20
+action=3Dhttp://apps.its.txstate.edu/formemailer.pl method=3Dpost><INPUT =
+type=3Dhidden=20
+value=3D"sn10@txstate.edu, ospirb@txstate.edu, ki11@txstate.edu"=20
+name=3DDestinationEmail> <INPUT type=3Dhidden=20
+value=3Dhttp://www.txstate.edu/research/irb/irb_exemption_submitted.php=20
+name=3Dthankyoupage> <INPUT id=3Dmessagesubject type=3Dhidden=20
+value=3Dirb_exemption_form.html name=3Dmessagesubject>=20
+<H2>Section I </H2>
+<TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"90%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD>1.&nbsp; Are you <LABEL for=3Dselect></LABEL><SELECT =
+id=3DSenderStatus=20
+      name=3DSenderStatus> <OPTION value=3Dnone selected>--select =
+one--</OPTION>=20
+        <OPTION value=3Dstudent>a student</OPTION> <OPTION =
+value=3Dfaculty>a faculty=20
+        member</OPTION> <OPTION value=3Dstaff_member>a staff =
+member</OPTION>=20
+        <OPTION value=3Dother>other</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD>2.&nbsp; This project is&nbsp; <LABEL =
+for=3Dlabel></LABEL><SELECT=20
+      id=3Dsponsorship name=3Dsponsorship> <OPTION value=3Dnone =
+selected>--select=20
+        one--</OPTION> <OPTION value=3Dfunded_research>Funded =
+Research</OPTION>=20
+        <OPTION value=3Dother_spons_progr_contract>Other Sponsored=20
+        Program/Contract</OPTION> <OPTION =
+value=3Dfaculty_nonfunded>FACULTY=20
+        non-funded Research</OPTION> <OPTION=20
+        value=3Dthesis_dissertation>Thesis/Dissertation</OPTION> <OPTION =
+
+        value=3Dacademic_classrm_project>Academic/Classroom =
+Project</OPTION>=20
+        <OPTION value=3DInstitut_admin_progrm>Institutional/Admin =
+Program</OPTION>=20
+        <OPTION value=3Dother>Other</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD>3.&nbsp; Please provide: </TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; First Name <INPUT id=3DSenderFirstName=20
+      name=3DSenderFirstName> &nbsp; Last Name <INPUT id=3DSenderName=20
+      name=3DSenderName></TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; Phone Number <INPUT id=3DSenderPhone =
+size=3D12=20
+      name=3DSenderPhone> &nbsp; Extension <INPUT id=3DSenderPhoneExt =
+size=3D15=20
+      value=3D"-N/A if no ext.-" name=3DSenderPhoneExt> =
+&nbsp;&nbsp;Email <INPUT=20
+      id=3DSenderEmail size=3D35 name=3DSenderEmail></TD></TR>
+  <TR>
+    <TD>
+      <H6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Please check to be sure your =
+phone=20
+      number and email address are correct. </H6></TD></TR>
+  <TR>
+    <TD>4.&nbsp; If you are a student, please provide your supervising =
+faculty=20
+      member's full name: </TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; Faculty Name <INPUT id=3DFacultyName =
+size=3D35=20
+      value=3D"-N/A, if not a student-" name=3DFacultyName></TD></TR>
+  <TR>
+    <TD>
+      <H2>Section II </H2></TD></TR>
+  <TR>
+    <TD>1.&nbsp; If this is an academic or classroom project, does the =
+scope=20
+      extend beyond Texas State University? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_1_academic_project>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_1_academic_project> No</LABEL> </TD></TR>
+  <TR>
+    <TD>2.&nbsp; Would you describe this project as "a systematic=20
+      investigation, designed to develop or contribute to generalizable=20
+      knowledge? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_2_contribute_knowledge>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_2_contribute_knowledge> No</LABEL> </TD></TR>
+  <TR>
+    <TD>3.&nbsp; Will the results of your project be put on the =
+internet,=20
+      shared at a conference, published, or otherwise disseminated? =
+</TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_3_share_results>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_3_share_results> No</LABEL> </TD></TR>
+  <TR>
+    <TD>4.&nbsp;Will identifiable private information from individuals =
+be=20
+      collected from contact with research participants ? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_4_interact_people>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_4_interact_people> No</LABEL> </TD></TR>
+  <TR>
+    <TD>5.&nbsp; Will identifiable private information from individuals =
+be=20
+      collected from other sources (e.g. medical records)? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_5_collect_info>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_5_collect_info> No</LABEL> </TD></TR>
+  <TR>
+    <TD>6.&nbsp; Does the project involve fetuses, pregnant women or =
+human in=20
+      vitro fertilization? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_6_involve_pregnant>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_6_involve_pregnant> No</LABEL> </TD></TR>
+  <TR>
+    <TD>7.&nbsp; Does the project involve prisoners? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_7_involve_prisoners>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_7_involve_prisoners> No</LABEL> </TD></TR>
+  <TR>
+    <TD>8.&nbsp; Does the project involve any persons who are mentally=20
+      impaired or homeless or who have limited autonomy? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_8_involve_vulnerable>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_8_involve_vulnerable> No</LABEL> </TD></TR>
+  <TR>
+    <TD>9.&nbsp; Does the project involve the review of medical records =
+if the=20
+      information is recorded in such a way that subjects can be =
+indentified,=20
+      directly or through identifiers linked to the subjects? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_9_medical_identifiers>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_9_medical_identifiers> No</LABEL> </TD></TR>
+  <TR>
+    <TD>10. Does the project involve survey or interview techniques =
+which=20
+      include minors as subjects in which the researcher(s) participate =
+in the=20
+      activities being observed? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_10_minor_subjects>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_10_minor_subjects> No</LABEL> </TD></TR>
+  <TR>
+    <TD>11. Will a drug, biological product, medical device, or other =
+product=20
+      regulated by the FDA be used in this project? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_11_FDAproduct_used>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_11_FDAproduct_used> No</LABEL> </TD></TR>
+  <TR>
+    <TD>12. Will the participants be asked to ingest substances of any=20
+  kind?</TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_12_ingest_substance>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_12_ingest_substance> No</LABEL> </TD></TR>
+  <TR>
+    <TD>13. Will the participants be asked to perform any physical =
+tasks?=20
+  </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_13_physical_tasks>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_13_physical_tasks> No</LABEL> </TD></TR>
+  <TR>
+    <TD>14. Does the research attempt to influence or change =
+participants'=20
+      behavior, perception, or cognition? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_14_influence_behavior>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_14_influence_behavior> No</LABEL> </TD></TR>
+  <TR>
+    <TD>15. Does the project involve questions or discussions of =
+sensitive or=20
+      deeply personal aspects of the subject's behavior, life =
+experiences or=20
+      attitudes?&nbsp; Examples include substance abuse, sexual =
+activity, sexual=20
+      orientation, sexual abuse, criminal behavior, sensitive =
+demographic data,=20
+      detailed health history, etc. </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_15_sensitive_discussion>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_15_sensitive_discussion> No</LABEL> =
+</TD></TR>
+  <TR>
+    <TD>16. Does the project involve techniques which expose the subject =
+to=20
+      discomfort, harassment, embarrassment, stigma, alarm or fear =
+beyond levels=20
+      encountered in the daily life of a healthy individual? </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_16_exposeto_discomfort>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_16_exposeto_discomfort> No</LABEL> </TD></TR>
+  <TR>
+    <TD>17. Does the project involve the deception of subjects? =
+</TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes=20
+      name=3DII_17_subject_deception>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_17_subject_deception> No</LABEL> </TD></TR>
+  <TR>
+    <TD>18. Does the project involve videotaping or audiotaping of =
+subjects?=20
+    </TD></TR>
+  <TR>
+    <TD>&nbsp; <LABEL><INPUT type=3Dradio value=3DYes =
+name=3DII_18_taping_subjects>=20
+      Yes</LABEL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<LABEL> <INPUT =
+type=3Dradio=20
+      value=3DNo name=3DII_18_taping_subjects> No</LABEL> </TD></TR>
+  <TR>
+    <TD>
+      <H2>Section III </H2></TD></TR>
+  <TR>
+    <TD><A id=3DSectionIIIQuestion2 =
+name=3DSectionIIIQuestion2></A>1.&nbsp; If you=20
+      are choosing one of the <A=20
+      =
+href=3D"http://www.txstate.edu/research/irb/irb_exemption_form.html#categ=
+ories_of_exemption">six=20
+      federal categories of exemption</A>, which <STRONG>one</STRONG> =
+are you=20
+      choosing?<BR><SPAN class=3Dstyle9>**</SPAN>If your project falls =
+under more=20
+      than one exemption, choose the one that is most applicable.&nbsp; =
+You may=20
+      cite the others in #3 below. </TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; <LABEL><SELECT =
+id=3DIII_1_exempt_category=20
+      name=3DIII_1_exempt_category> <OPTION value=3Dnone =
+selected>--select=20
+        one--</OPTION> <OPTION value=3D"Category 1(i)">Category 1 =
+(i)</OPTION>=20
+        <OPTION value=3D"Category 1 (ii)">Category 1 (ii)</OPTION> =
+<OPTION=20
+        value=3D"Category 2">Category 2</OPTION> <OPTION=20
+        value=3D"Category 3 (i)">Category 3 (i)</OPTION> <OPTION=20
+        value=3D"Category 3 (ii)">Category 3 (ii)</OPTION> <OPTION=20
+        value=3D"Category 4">Category 4</OPTION> <OPTION=20
+        value=3D"Category 5 (i)">Category 5 (i)</OPTION> <OPTION=20
+        value=3D"Category 5 (ii)">Category 5 (ii)</OPTION> <OPTION=20
+        value=3D"Category 5 (iii)">Category 5 (iii)</OPTION> <OPTION=20
+        value=3D"Category 5 (iv)">Category 5 (iv)</OPTION> <OPTION=20
+        value=3D"Category 6 (i)">Category 6 (i)</OPTION> <OPTION=20
+        value=3D"Category 6 (ii)">Category 6 (ii)</OPTION></SELECT> =
+</LABEL></TD></TR>
+  <TR>
+    <TD>
+      <H6>Please note for questions 1, 3, and 4 :&nbsp; </H6>
+      <H6><BR>The text areas are limited to 2000 =
+characters/approximately 300=20
+      words.&nbsp; Even though you are allowed to type more than the =
+specified=20
+      limit, those additional words/characters will be cropped/cut off =
+when you=20
+      move to the next question.</H6></TD></TR>
+  <TR>
+    <TD>2.&nbsp; What is the purpose of the project? (300 words or =
+less)</TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; <LABEL><TEXTAREA =
+id=3DIII_2_project_purpose name=3DIII_2_project_purpose rows=3D10 =
+cols=3D100 onchange=3D"checkInputSize(this, 2000)"></TEXTAREA>=20
+      </LABEL></TD></TR>
+  <TR>
+    <TD>3.&nbsp; Explain how this exemption category pertains to your =
+project:=20
+      (300 words or less) </TD></TR>
+  <TR>
+    <TD><LABEL>&nbsp;&nbsp;&nbsp;&nbsp; <TEXTAREA =
+id=3DIII_3_category_pertains name=3DIII_3_category_pertains rows=3D10 =
+cols=3D100 onchange=3D"checkInputSize(this, 2000)"></TEXTAREA>=20
+      </LABEL></TD></TR>
+  <TR>
+    <TD>4.&nbsp; If you believe your project poses no risk to human=20
+      participants or should be exempt from IRB review for other =
+reasons, please=20
+      explain: (300 words or less) </TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp; <LABEL><TEXTAREA =
+id=3DIII_4_exempt_reason name=3DIII_4_exempt_reason rows=3D10 cols=3D100 =
+onchange=3D"checkInputSize(this, 2000)"></TEXTAREA>=20
+      </LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=3Dcenter><INPUT type=3Dsubmit value=3DSubmit =
+name=3DSubmit>=20
+</DIV></TD></TR>
+  <TR>
+    <TD>
+      <H4>&nbsp;</H4></TD></TR></TBODY></TABLE></FORM>
+<TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"90%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <H6><A id=3DCategoriesofExemption=20
+      name=3Dcategories_of_exemption></A>Categories of =
+Exemption:&nbsp;&nbsp; (<A=20
+      =
+href=3D"http://www.txstate.edu/research/irb/irb_exemption_form.html#Secti=
+onIIIQuestion2">Return=20
+      to Section III, Question 2</A>) </H6>
+      <P>&nbsp;</P>
+      <H6>Exempt Categories of Research listed at 45 CFR, Part 46, Sec.=20
+      101(b)<BR><BR>(1) Research conducted in established or commonly =
+accepted=20
+      educational settings, involving normal educational practices, such =
+as</H6>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; </P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (i) research on regular and special =
+education=20
+      instructional strategies, or </P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; </P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (ii) research on the effectiveness of =
+or the=20
+      comparison among instructional techniques, curricula, or classroom =
+
+      management methods.</P>
+      <H6>&nbsp;</H6>
+      <H6>(2) Research involving the use of educational tests =
+(cognitive,=20
+      diagnostic, aptitude, achievement), survey procedures, interview=20
+      procedures or observation of public behavior, unless:</H6>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (i) information obtained is recorded =
+in such a=20
+      manner that human subjects can be identified, directly or through=20
+      identifiers linked to the subjects; and </P>
+      <P>&nbsp;&nbsp;&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (ii) any disclosure of the human =
+subjects'=20
+      responses outside the research could reasonably place the subjects =
+at risk=20
+      of criminal or civil liability or be damaging to the subjects' =
+financial=20
+      standing, employability, or reputation.</P>
+      <P>&nbsp;</P>
+      <P>(<SPAN class=3Dstyle7>Please note</SPAN>: Surveys on sensitive =
+or=20
+      personal topics which may cause stress to study participants may =
+not be=20
+      exempt from IRB review.)</P>
+      <P>&nbsp;</P>
+      <P>(<SPAN class=3Dstyle7>Note</SPAN>: The section of this category =
+
+      pertaining to standardized educational tests may be applied to =
+research=20
+      involving children. This category may also apply to research with =
+children=20
+      when the investigator observes public behavior but does NOT =
+participate in=20
+      that behavior or activity. However this section is NOT applicable =
+to=20
+      survey or interview research involving children.)</P>
+      <H6>&nbsp;</H6>
+      <H6>(3) Research involving the use of educational tests =
+(cognitive,=20
+      diagnostic, aptitude, achievement), survey procedures, interview=20
+      procedures, or observation of public behavior that is not exempt =
+under=20
+      paragraph (2) of this section, if:</H6>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (i) the human subjects are elected or=20
+      appointed public officials or candidates for public office; or =
+</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (ii) federal statute(s) require(s) =
+without=20
+      exception that the confidentiality of the personally identifiable=20
+      information will be maintained throughout the research and =
+thereafter.</P>
+      <H6>&nbsp;</H6>
+      <H6>(4) Research involving the collection or study of existing =
+data,=20
+      documents, records, pathological specimens, or diagnostic =
+specimens, if=20
+      these sources are publicly available or if the information is =
+recorded by=20
+      the investigator in such a manner that subjects cannot be =
+identified,=20
+      directly or through identifiers linked to the subjects.</H6>
+      <P>&nbsp;</P>
+      <P>(Example: existing data, records review, pathological =
+specimens)</P>
+      <P>&nbsp;</P>
+      <P>(<SPAN class=3Dstyle7>Note</SPAN>: This data must be in =
+existence before=20
+      the project begins)</P>
+      <H6>&nbsp;</H6>
+      <H6>(5) Research and demonstration projects which are conducted by =
+or=20
+      subject to the approval of department or agency heads, and which =
+are=20
+      designed to study, evaluate, or otherwise examine:</H6>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (i) Public benefit or service =
+programs;</P>
+      <P><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; (ii) procedures for obtaining =
+benefits=20
+      or services under those programs;</SPAN></P>
+      <P><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; (iii) possible changes in or=20
+      alternatives to those programs or procedures; or</SPAN></P>
+      <P><SPAN>&nbsp;&nbsp;&nbsp;&nbsp; (iv) possible changes in methods =
+or=20
+      levels of payment for benefits or services under those=20
+programs.</SPAN></P>
+      <P>(<SPAN class=3Dstyle7>Note</SPAN>: Exemption category refers to =
+federal=20
+      government research)</P>
+      <P>&nbsp;</P>
+      <H6>(6) Taste and food quality evaluation and consumer acceptance =
+studies,=20
+      </H6>
+      <P>&nbsp;</P>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (i)&nbsp; if wholesome foods without =
+additives=20
+      are consumed =
+or</P>=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=
+=BD=EF=BF=BD=EF=BF=BD=20
+      <P>&nbsp;&nbsp;&nbsp;&nbsp; (ii) if a food is consumed that =
+contains a=20
+      food ingredient at or below the level and for a use found to be =
+safe, or=20
+      agricultural chemical or environmental contaminant at or below the =
+level=20
+      found to be safe, by the Food and Drug Administration or approved =
+by the=20
+      Environmental Protection Agency or the Food Safety and Inspection =
+Service=20
+      of the U.S. Department of Agriculture</P>
+      <P class=3Dformheading>&nbsp;</P></TD></TR></TBODY></TABLE>
+<H4 class=3Dformheading>&nbsp;</H4>
+<H4 class=3Dformheading>&nbsp;</H4></BODY></HTML>
+
+------=_NextPart_000_0000_01C7D5E6.7818E400
+Content-Type: application/x-css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.txstate.edu/research/css/forms.css
+
+BODY {
+	BACKGROUND: #eeeeee; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:link {
+	COLOR: #997d5b
+}
+A:visited {
+	COLOR: #997d5b
+}
+A:active {
+	COLOR: #996633
+}
+A:hover {
+	COLOR: #996666
+}
+H1 {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 14pt; MARGIN-BOTTOM: =
+0px; WORD-SPACING: 0px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: =
+Arial, Helvetica, sans-serif
+}
+H2 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+italic 12pt/100% Arial, Helvetica, sans-serif; COLOR: #334d55
+}
+H3 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+12pt/100% Arial, Helvetica, sans-serif; COLOR: #ffffff
+}
+H4 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; FONT: bold italic 11pt/100% Arial, =
+Helvetica, sans-serif
+}
+H5 {
+	MARGIN-TOP: 4px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: =
+4px; WORD-SPACING: 0px; COLOR: #000000; LINE-HEIGHT: 100%; FONT-FAMILY: =
+Arial, Helvetica, sans-serif
+}
+H6 {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px; WORD-SPACING: 0px; FONT: bold =
+italic 10pt/100% Arial, Helvetica, sans-serif; COLOR: #334d55
+}
+.explanation {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: =
+normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 14px Arial, Helvetica, sans-serif; COLOR: #000000; =
+PADDING-TOP: 0px
+}
+.iacuccerts {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #334d55
+}
+.submitstatement {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #ffffff; LINE-HEIGHT: =
+normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.section {
+	FONT-WEIGHT: bold; FONT-SIZE: 24px; COLOR: #996633; LINE-HEIGHT: 24px; =
+FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.randomnumbers {
+	FONT: x-large/18px Arial, Helvetica, sans-serif; COLOR: #cc0000
+}
+.form_pageName {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; BACKGROUND: =
+url(../images/pagename_bg.gif); PADDING-BOTTOM: 14px; MARGIN: 0px; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #ccd2d2 1px solid
+}
+.form_pageName H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 175% Arial, sans-serif; COLOR: #ffffff; PADDING-TOP: 0px
+}
+.form_pageName H4 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; FONT: 80% Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; =
+PADDING-TOP: 0px
+}
+.form_pageName IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; RIGHT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative; TOP: 0px
+}
+
+------=_NextPart_000_0000_01C7D5E6.7818E400--

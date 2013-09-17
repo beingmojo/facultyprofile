@@ -1,0 +1,25 @@
+/* CSS Document */
+#content { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal;
+	color: #000000;
+	text-align:left;
+	border:0px;
+	width:180px;
+}
+
+	
+#content title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #000000;
+}
+
+#content rest{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal;
+	color: #000000;
+}

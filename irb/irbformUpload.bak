@@ -1,0 +1,79 @@
+
+
+<?php
+$con = mysql_connect("localhost","irbadmin","irbadmin");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }mysql_select_db("irbdb", $con);
+
+$username = "me";
+echo($_POST['App_Number']."<br>");
+echo($_POST['ProjectTitle']);
+
+$sql="INSERT INTO application (
+username, App_Number, ProjectTitle, ProjectType, CourseNumber, FunderName, SignedHardCopy, ";
+$sql = $sql . "ChildrenUnder18, NursingHomePatients, Prisoner, PregnantWomenOrFetuses, ";
+$sql = $sql . "IllnessInjoryOrDisability, MentallyOrPsychologicallyImpaired, IncentiveForParticipation, RequestName, RequestSSN, RequestPhoneNum, RequestAddress, RequestMedicalInfo, RequestNone, RiskRating, BenefitRating, RiskAssesMethod, InformedConsentDoc, NoInformedConsentExp, AppropriateLanguage, OtherLanguage, ArrangeForTranslators, TranslatorUnderstand, ObtainSubjectsSignature, ProvideCopyOfConsentDoc, LiabilityRelease, ResearchInvolvementStatement, ExplanationOfPurpose, ExpectDuration, IdentificationOfExperimentalProc, DescriptionOfRisk, ExpectedBenefit, AlternativesOfDisclosure, ExplanationOfCompensation, ContactInfo, VoluntaryParticipationStatement) VALUES ('".$username."', '".$_POST['App_Number']."', '".$_POST['ProjectTitle']."', '".$_POST['four_Project_Type']."', '".$_POST['Course_Number']."', '".$_POST['Funder_Name_Other']."', '".$_POST['two_Signed_Hard_Copy_Required']."', '".$_POST['two_Using_ChildrenUnderEighteen']."', '".$_POST['two_Using_NursingHomePatients']."', '".$_POST['two_Using_Prisoners']."', '".$_POST['two_Using_PregnantWomenOrFetuses']."', '".$_POST['two_Using_PersonsWithIllnessInjoryOrDisability']."', '".$_POST['two_Using_MentallyOrPsychologicallyImpairedPersons']."', '".$_POST['two_Using_Incentives_For_Participation']."', '".$_POST['requestingName']."', '".$_POST['requestingSSN']."', '".$_POST['requestingPhoneNum']."', '".$_POST['requestingAddress']."', '".$_POST['requestingMedicalInfo']."', '".$_POST['requestingNone']."', '".$_POST['Risk_Rating']."', '".$_POST['Benefit_Rating']."', '".$_POST['Risk_Asses_Method_Expl']."', '".$_POST['two_Using_Informed_Consent_Document']."', '".$_POST['rText_noInformedConsentExplanation']."', '".$_POST['two_Appropriate_Language']."', '".$_POST['two_Other_Languages']."', '".$_POST['two_Arrange_For_Translators']."', '".$_POST['two_Translators_Understand_Meaning']."', '".$_POST['two_Obtaining_Subjects_Signature']."', '".$_POST['two_Providing_Copy_of_Consent_Doc']."', '".$_POST['two_Liability_Release']."', '".$_POST['two_Research_Involvment_Statement']."', '".$_POST['two_Explanation_of_Purpose']."', '".$_POST['two_Expected_Duration']."', '".$_POST['two_Identification_of_Experimental_Procedures']."', '".$_POST['two_Description_of_Risks']."', '".$_POST['two_Expected_Benefit']."', '".$_POST['two_Alternatives_Disclosure']."', '".$_POST['two_Explanation_of_Compensation']."', '".$_POST[two_Contact_Info]."', '".$_POST['two_Voluntary_Participation_Statement']."')";
+
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
+  }
+else
+{
+echo "1 record added";
+mysql_close($con);
+}
+
+
+
+
+//upload file
+
+$targetpath = "appdoc";
+$target= $targetpath; 
+//$target = $targetpath . $_POST['App_Num'];
+//mkdir($target,0777);
+
+while(list($key,$value) = each($_FILES[docs][name]))
+{
+// check if any blank field is entered
+if(!empty($value)){   
+ 
+	// filename stores the value
+	$filename = $value;   
+
+	//display the file type
+	echo $_FILES[docs][type][$key]; 
+	echo "<br>";
+  
+ 	//  upload the file to the server                        
+	copy($_FILES[docs][tmp_name][$key], $target);
+
+  	// set permission to the file    
+	chmod("$target",0777);                 
+	}
+}
+
+
+//$target = "appdoc/"; 
+//$target = $target . _POST['App_Num'] . "/";
+/*
+foreach ($_FILES["docs"]["error"] as $key => $error) {
+	$target = $target . basename( $_FILES['uploaded']['name']) ; 
+ 
+    if ($error == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["docs"]["tmp_name"][$key];
+        $name = $_FILES["docs"]["name"][$key];
+        move_uploaded_file($tmp_name, $target);
+	echo ("The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded");
+
+    }
+	else {
+		echo "Sorry, there was a problem uploading your file.";
+	}
+}
+
+*/
+?> 

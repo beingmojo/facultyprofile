@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/help_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>rSp Help Guide - </title>
+<!-- InstanceEndEditable -->
+<link href="../styles/style1.css" rel="stylesheet" type="text/css" />
+<link href="../styles/list.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="form_elements_row_action" id="basic_layout">
+ <tr>
+    <td height="3" class="table_background">
+      <table width="100%"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><div align="left"><img src="../images/rspbanner.jpg" alt="Research Profile" width="751" height="95" align="left" /></div>          </td>
+          <td>
+	      	<form action="../searchresults.php" method="get" enctype="application/x-www-form-urlencoded">
+			    <input name="search" type="text" class="form_elements" id="search" size="15" />		  
+			    <input name="Submit" type="submit" class="form_elements_row_action" value="Quick Search" />
+			  </form>		  </td>
+        </tr>
+      </table>    </td>
+  </tr>
+  <tr>
+    <td align="left" class="table_background_other"><!-- InstanceBeginEditable name="pagename" -->
+      <div align="left" class="page_heading">Help Guide - Faculty Profile </div>
+	      <!-- InstanceEndEditable -->	</td>	  
+
+    <td valign="top" class="table_background_other" align='right'>
+		<div id="menu">
+			<ul id="nav">
+			  <li>
+			  <?php
+			  print( "<a href='{$_home}/index.php'>Home</a>" );
+			  if( $_SESSION["UID"] != "" )
+			  	{print( "<ul><li><a href='researchspace.php'>Research Space</a></li>");
+			  	 print( "<li><a href='logoff.php'>Logoff</a></li></ul>" );
+				}
+			  ?>
+			  </li>
+			  <li><a href="../browseprofiles.php?view=1">Browse </a>
+				<ul>
+				  <li><a href="../browseprofiles.php?view=1">Faculty</a></li>
+				  <li><a href="../browseprofiles.php?view=2">Center</a></li>
+				  <li><a href="../browseprofiles.php?view=3">Technology</a></li>
+				  <li><a href="../browseprofiles.php?view=4">Facility</a></li>
+				  <li><a href="../browseprofiles.php?view=5">Equipment</a></li>
+				  <li><a href="../browseprofiles.php?view=6">Labs & Groups</a></li>
+			  	  <li><a href="../courses.php">Courses</a></li>
+				</ul>
+			  </li> 
+			  <li><a href="../newsearch.php">Search </a>
+				<ul>
+				  <li><a href="../newsearch.php">Basic</a></li>
+				  <li><a href="../clustersearch.php">Cluster</a></li>
+				  <li><a href="../advsearch.php">Advanced</a></li>
+				</ul>
+			  </li>
+			  <li><a href="../aboutrsp.php">Support</a>
+				<ul>
+				  <li><a href="../aboutrsp.php">About rSp</a></li>
+				  <li><a href="index.php">Help and FAQ's</a></li>
+				  <li><a href="../feedback.php">Contact Us</a></li>
+				</ul>
+			  </li>
+
+			</ul>
+      </div>
+
+	</td>
+      
+  </tr>
+  <!-- content goes here -->
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+	<!-- InstanceBeginEditable name="content" -->
+	<p class="font_topic"><a name="facul_sa" id="facul_sa" class="font_topic"></a>faculty - synergistic activities </p>
+	<p class="list_others"> content.............. </p>
+	<p class="list_others" ><img src="screenshots/faculty/synergistic%20activities.png" alt="Login Screenshot" width="813" height="65" /></p>
+	<p class="list_others"> content.................... </p>
+	  <p class="list_others" ><img src="screenshots/faculty/synergistic%20activities%20edit.png" alt="Login Screenshot" width="812" height="445" /></p>
+	  <p class="list_others"> content...............</p>
+	 
+	  <hr width="100%" class="font_orange" />
+   
+    <p class="list_others">Related Topics:&nbsp;<a href="faculty.htm">Sample Faculty Profile</a> | <a href="facul_contactinfo.htm">Contact Info</a> | <a href="facul_pp.htm">Professional Preparation</a> | <a href="facul_r&e.htm">Research & Expertise</a> | <a href="facul_pub.htm">Publications</a> | <a href="facul_p&p.htm">Presentations & Projects</a> | <a href="facul_aff.htm">Affiliations</a> | <a href="facul_app.htm">Appiontments</a> | <a href="facul_support.htm">Support</a> | <a href="facul_n&a.htm">News & Articles</a> | <a href="facul_a&h.htm">Awards & Honors</a> | <a href="facul_addinfo.htm">Additioanl Information</a> . </p>
+    
+	<p class="list_others">Related Links: </p>
+	<!-- InstanceEndEditable -->	</td>
+  </tr>
+</table>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="table_background">&nbsp;</td>
+  </tr>
+  <!-- footer content goes here -->
+  <tr>
+    <td bgcolor="#D7CFCD"><div align="center"><font size="2" class="form_elements_row_action">&copy; 2005<a href="http://www.uta.edu/" target="www.uta.edu">The University of Texas at Arlington</a> | 
+  Research Administration | Questions or Comments about this site? Email: <a href="http://www.uta.edu/ra/siteHelp.html">webmaster</a>  | Wednesday , February 01, 2006<br />
+    </font></div></td>
+<!--end of footer -->
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

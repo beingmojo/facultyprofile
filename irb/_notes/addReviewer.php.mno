@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:App_Number;datatype:string,name:rev1ID;datatype:string,name:rev2ID;datatype:string,name:rev3ID;datatype:string" />
+</info>

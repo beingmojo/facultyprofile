@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>irb_inquiry_request_form</title>
+
+<script type="text/JavaScript">
+<!--
+function FDK_AddToValidateArray(FormName,FormElement,Validation,SetFocus)
+{
+    var TheRoot=eval("document."+FormName);
+ 
+    if (!TheRoot.ValidateForm) 
+    {
+        TheRoot.ValidateForm = true;
+        eval(FormName+"NameArray = new Array()")
+        eval(FormName+"ValidationArray = new Array()")
+        eval(FormName+"FocusArray = new Array()")
+    }
+    var ArrayIndex = eval(FormName+"NameArray.length");
+    eval(FormName+"NameArray[ArrayIndex] = FormElement");
+    eval(FormName+"ValidationArray[ArrayIndex] = Validation");
+    eval(FormName+"FocusArray[ArrayIndex] = SetFocus");
+ 
+}
+
+function FDK_ValidateRadio(RadioGroup,ErrorMsg)
+{
+	var msg = ErrorMsg;
+
+    for (x=0;x<RadioGroup.length;x++)  {
+		if (RadioGroup[x].checked)  {
+			msg=""
+		} 
+	}
+	return msg;
+}
+
+function FDK_AddRadioValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateRadio("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName + '[0]'),ValString,SetFocus)
+}
+
+function FDK_Validate(FormName, stopOnFailure, AutoSubmit, ErrorHeader)
+{
+ var theFormName = FormName;
+ var theElementName = "";
+ if (theFormName.indexOf(".")>=0)  
+ {
+   theElementName = theFormName.substring(theFormName.indexOf(".")+1)
+   theFormName = theFormName.substring(0,theFormName.indexOf("."))
+ }
+ var ValidationCheck = eval("document."+theFormName+".ValidateForm")
+ if (ValidationCheck)  
+ {
+  var theNameArray = eval(theFormName+"NameArray")
+  var theValidationArray = eval(theFormName+"ValidationArray")
+  var theFocusArray = eval(theFormName+"FocusArray")
+  var ErrorMsg = "";
+  var FocusSet = false;
+  var i
+  var msg
+    
+ 
+        // Go through the Validate Array that may or may not exist
+        // and call the Validate function for all elements that have one.
+  if (String(theNameArray)!="undefined")
+  {
+   for (i = 0; i < theNameArray.length; i ++)
+   {
+    msg="";
+    if (theNameArray[i].name == theElementName || theElementName == "")
+    {
+      msg = eval(theValidationArray[i]);
+    }
+    if (msg != "")
+    {
+     ErrorMsg += "\n"+msg;                   
+     if (stopOnFailure == "1") 
+     {
+       if (theFocusArray[i] && !FocusSet)  
+      {
+       FocusSet=true;
+       theNameArray[i].focus();
+      }
+      alert(ErrorHeader+ErrorMsg);
+      document.MM_returnValue = false; 
+      break;
+     }
+     else  
+     {
+      if (theFocusArray[i] && !FocusSet)  
+      {
+       FocusSet=true;
+       theNameArray[i].focus();
+      }
+     }
+    }
+   }
+  }
+  if (ErrorMsg!="" && stopOnFailure != "1") 
+  {
+   alert(ErrorHeader+ErrorMsg);
+  }
+  document.MM_returnValue = (ErrorMsg==""); 
+  if (document.MM_returnValue && AutoSubmit)  
+  {
+   eval("document."+FormName+".submit()")
+  }
+ }
+}
+
+function FDK_StripChars(theFilter,theString)
+{
+	var strOut,i,curChar
+
+	strOut = ""
+	for (i=0;i < theString.length; i++)
+	{		
+		curChar = theString.charAt(i)
+		if (theFilter.indexOf(curChar) < 0)	// if it's not in the filter, send it thru
+			strOut += curChar		
+	}	
+	return strOut
+}
+
+function FDK_ValidateNonBlank(FormElement,ErrorMsg)
+{
+  var msg = ErrorMsg;
+  var val = FormElement.value;  
+
+  if (!(FDK_StripChars(" \n\t\r",val).length == 0))
+  {
+     msg="";
+  }
+
+  return msg;
+}
+
+function FDK_AddNonBlankValidation(FormName,FormElementName,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateNonBlank("+FormElementName+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)
+}
+
+function FDK_AllInRange(x,y,theString)
+{
+	var i, curChar
+	
+	for (i=0; i < theString.length; i++)
+	{
+		curChar = theString.charAt(i)
+		if (curChar < x || curChar > y) //the char is not in range
+			return false
+	}
+	return true
+}
+
+function FDK_reformat(s)
+{
+    var arg;
+    var sPos = 0;
+    var resultString = "";
+
+    for (var i = 1; i < FDK_reformat.arguments.length; i++) {
+       arg = FDK_reformat.arguments[i];
+       if (i % 2 == 1) 
+           resultString += arg;
+       else 
+       {
+           resultString += s.substring(sPos, sPos + arg);
+           sPos += arg;
+       }
+    }
+    return resultString;
+}
+
+function FDK_ValidateEmail(FormElement,Required,ErrorMsg)
+{
+   var msg = "";
+   var val = FormElement.value;
+   var msgInvalid = ErrorMsg;
+
+   var theLen = FDK_StripChars(" ",val).length
+   if (theLen == 0)	     {
+     if (!Required) return "";
+     else return msgInvalid;
+   }
+
+   if (val.indexOf("@",0) < 0 || val.indexOf(".")<0) 
+   {
+      msg = msgInvalid;
+   }
+   return msg;
+}
+
+function FDK_AddEmailValidation(FormName,FormElementName,Required,SetFocus,ErrorMsg)  {
+  var ValString = "FDK_ValidateEmail("+FormElementName+","+Required+","+ErrorMsg+")"
+  FDK_AddToValidateArray(FormName,eval(FormElementName),ValString,SetFocus)
+}
+//-->
+</script>
+<link href="../css/forms.css" rel="stylesheet" type="text/css" />
+</head><body onload="FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.description',true,'\'Please enter a brief description of your request.\'');FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.submit_date',true,'\'Please enter an approximate submission date for the application.\'');FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.application_number',true,'\'Please enter the application number.\'');FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.SenderFirstName',true,'\'Please enter your first name.\'');FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.SenderName',true,'\'Please enter your last name.\'');FDK_AddNonBlankValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.sponsor_course',true,'\'Please enter the faculty sponsor and course.\'');FDK_AddEmailValidation('irb_inquiry_request_form','document.irb_inquiry_request_form.SenderEmail',true,true,'\'Please enter a valid e-mail address.\\n(a valid e-mail address has an \\\'@\\\' and a \\\'.\\\')\'')">
+
+<h1 class="h1b">IRB Application Inquiry Request Form</h1>
+<p>&nbsp;</p>
+<form action="http://apps.its.txstate.edu/formemailer.pl" method="post" name="irb_inquiry_request_form" id="irb_inquiry_request_form" onsubmit="FDK_Validate('irb_inquiry_request_form',false,false,'The Form Could Not Be Submitted\n\n');return document.MM_returnValue">
+  <h2>
+    <input type="hidden" name="DestinationEmail" value="ospirb@txstate.edu, jl30@txstate.edu, mb29@txstate.edu">
+    <input type="hidden" name="thankyoupage"  value="http://www.osp.txstate.edu/irb/irbinquiryrequest_submitted.php" />
+    <input name="messagesubject" type="hidden" id="messagesubject" value="Confirmation-IRB Inquiry Request" />
+    <input type="hidden" name="options" value="send-to-sender" />
+  </h2>
+
+
+  <p> Please provide:</p>
+
+
+  <p>&nbsp;&nbsp;&nbsp;&nbsp; Approximate Date of Submission:&nbsp; 
+    <input name="submit_date" type="text" id="submit_date" size="10" />
+  </p>
+ 
+ 
+  <p>&nbsp;&nbsp;&nbsp;&nbsp; Appication Number 
+    <input name="application_number" type="text" id="application_number" />
+  </p>
+
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;	Applicant First Name
+    <input name="SenderFirstName" type="text" id="SenderFirstName" value="" size="20" />
+    &nbsp; Applicant Last Name
+    <input name="SenderName" type="text" id="SenderName" value="" size="20" />
+  </p>
+
+  <p>&nbsp;&nbsp;&nbsp;&nbsp; Applicant Email Address 
+    <input name="SenderEmail" type="text" id="SenderEmail" size="30" />
+  </p>
+
+  <p>&nbsp;&nbsp;&nbsp;&nbsp; Faculty Sponsor and Course 
+    <input name="sponsor_course" type="text" id="sponsor_course" size="50" />
+  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp; Brief Description of Request<br />
+&nbsp;&nbsp; 
+    <textarea name="description" cols="80" rows="5" id="description"></textarea>
+    <br />
+  </p>
+  <p>Please check your answers carefully before submitting.</p>
+  <p>Completed submissions will result in a confirmation email.&nbsp; If you do not receive a confirmation, please contact the Office of Research Compliance at 245-2314. </p>
+  <p align="left" >&nbsp;Wait until the server acknowledges processing your form           before leaving this page. </p>
+  <p align="left">Thank you for your cooperation. </p>
+  <p align="center">
+    <input type="submit" name="Submit" value="Submit Form" />
+
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
